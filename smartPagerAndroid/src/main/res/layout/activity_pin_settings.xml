@@ -1,0 +1,91 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/settings_dark_gray_background" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/settings_text_top_margin_single_caption" >
+
+        <!-- ===================================================================== -->
+        <!-- CHANGE PIN -->
+
+        <include layout="@layout/include_settings_separator" />
+
+        <RelativeLayout
+            android:id="@+id/settings_change_pin_layout"
+            style="@style/RelativeLayoutClickableSettings" >
+
+            <ImageView
+                android:id="@+id/settings_change_pin_image"
+                style="@style/IconImageSettings"
+                android:src="@drawable/settings_ic_pin_settings" />
+
+            <TextView
+                android:id="@+id/settings_change_pin_text"
+                style="@style/SingleCaptionSettings"
+                android:layout_toRightOf="@id/settings_change_pin_image"
+                android:text="@string/settings_change_pin" />
+        </RelativeLayout>
+
+        <include layout="@layout/include_settings_separator" />
+        <!-- ===================================================================== -->
+        <!-- REQUIRED PIN TO BE ENTERED -->
+
+        <TextView
+            style="@style/CaptionCapitalPagerSettings"
+            android:layout_marginTop="@dimen/settings_caption_capital_margin_top"
+            android:text="@string/settings_required_pin_to_be_entered" />
+
+        <include layout="@layout/include_settings_separator_bold" />
+
+        <TextView
+            style="@style/CaptionPagerSettings"
+            android:layout_marginTop="@dimen/settings_horizontal_margin"
+            android:text="@string/settings_every" />
+        
+        <TextView
+            android:id="@+id/settings_pin_entry_disabled"
+			android:gravity="center"
+            android:textColor="#FF0000"
+            android:textStyle="italic"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RadioGroup
+            android:id="@+id/settings_required_pin_radiogroup"
+            style="@style/RadiogroupSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RadioButton
+                android:id="@+id/settings_required_pin_30m"
+                style="@style/RadiobuttonsSettings"
+                android:text="@string/settings_30_minutes" />
+
+            <RadioButton
+                android:id="@+id/settings_required_pin_1h"
+                style="@style/RadiobuttonsSettings"
+                android:text="@string/settings_1_hour" />
+
+            <RadioButton
+                android:id="@+id/settings_required_pin_8h"
+                style="@style/RadiobuttonsSettings"
+                android:text="@string/settings_8_hours" />
+
+            <RadioButton
+                android:id="@+id/settings_required_pin_always"
+                style="@style/RadiobuttonsSettings"
+                android:checked="true"
+                android:text="@string/settings_always" />
+        </RadioGroup>
+
+        <include layout="@layout/include_settings_separator" />
+
+        <!-- ===================================================================== -->
+    </LinearLayout>
+
+</ScrollView>

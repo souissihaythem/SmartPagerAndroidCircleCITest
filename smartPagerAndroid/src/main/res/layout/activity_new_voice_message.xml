@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_rounded_rectangle"
+    android:minHeight="80dp"
+    android:padding="10dp" >
+
+    <ImageButton
+        android:id="@+id/recorder_action_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/selector_round_button"
+        android:minHeight="60dp"
+        android:minWidth="60dp"
+        android:progressDrawable="@drawable/layerlist_slider_progress"
+        android:src="@drawable/voice_dialog_ic_record" />
+
+    <TextView
+        android:id="@+id/recorder_description_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="25dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/recorder_progress_text_view"
+        android:layout_toRightOf="@+id/recorder_action_button"
+        android:background="@color/recorder_layout_color"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/type_record_when_ready"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/recorder_text_color" />
+
+    <TextView
+        android:id="@+id/recorder_progress_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="00:00"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/recorder_text_color" />
+
+</RelativeLayout>

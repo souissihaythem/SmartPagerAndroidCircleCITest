@@ -1,0 +1,9 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:drawable="@drawable/shape_message_item_time_background" />
+    
+    <item >
+        <bitmap android:src="@drawable/msg_list_bck_unread" android:gravity="left" />
+    </item>
+	
+</layer-list>

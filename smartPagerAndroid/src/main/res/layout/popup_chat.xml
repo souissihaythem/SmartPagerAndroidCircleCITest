@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popup_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#00000000"
+    android:orientation="vertical"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="5dp" >
+
+    <!-- - - - - QUICK RESPONCE - - - - -->
+
+
+    <!-- - - - - FORWARD - - - - -->
+
+
+    <!-- - - - - ADD IMAGE - - - - -->
+
+    <RelativeLayout
+        android:id="@+id/popup_select_image_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp" >
+
+        <ImageView
+            android:id="@+id/popup_select_image_imageview"
+            style="@style/PopupImage"
+            android:src="@drawable/chat_menu_ic_select_image" />
+
+        <TextView
+            style="@style/PopupText"
+            android:layout_toRightOf="@+id/popup_select_image_imageview"
+            android:text="@string/popup_select_image" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_lite_background" />
+
+    <!-- - - - - ADD PHOTO - - - - -->
+
+    <RelativeLayout
+        android:id="@+id/popup_take_photo_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp" >
+
+        <ImageView
+            android:id="@+id/popup_take_photo_imageview"
+            style="@style/PopupImage"
+            android:src="@drawable/chat_menu_ic_take_photo" />
+
+        <TextView
+            style="@style/PopupText"
+            android:layout_toRightOf="@+id/popup_take_photo_imageview"
+            android:text="@string/popup_take_photo" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_lite_background" />
+
+    <!-- - - - - ADD AUDIO - - - - -->
+    <RelativeLayout
+        android:id="@+id/popup_record_audio_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp" >
+
+        <ImageView
+            android:id="@+id/popup_record_audio_imageview"
+            style="@style/PopupImage"
+            android:src="@drawable/chat_menu_ic_record_audio" />
+
+        <TextView
+            style="@style/PopupText"
+            android:layout_toRightOf="@+id/popup_record_audio_imageview"
+            android:text="@string/popup_record_audio" />
+    </RelativeLayout>
+	
+	<!-- - - - - QUICK RESPONCE - - - - -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_lite_background" />
+
+    <RelativeLayout
+        android:id="@+id/popup_quick_responce_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp" >
+
+        <ImageView
+            android:id="@+id/popup_quick_responce_imageview"
+            style="@style/PopupImage"
+            android:src="@drawable/chat_menu_ic_quick_response" />
+
+        <TextView
+            style="@style/PopupText"
+            android:layout_toRightOf="@+id/popup_quick_responce_imageview"
+            android:text="@string/quick_responce" />
+    </RelativeLayout>
+    
+    <!-- - - - - ADD USER - - - - -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_lite_background" />
+
+    <RelativeLayout
+        android:id="@+id/popup_add_user_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp" >
+
+        <ImageView
+            android:id="@+id/popup_add_user_imageview"
+            style="@style/PopupImage"
+            android:src="@drawable/ic_add_user" />
+
+        <TextView
+            style="@style/PopupText"
+            android:layout_toRightOf="@+id/popup_add_user_imageview"
+            android:text="@string/add_user_s_" />
+    </RelativeLayout>
+
+    <!-- - - - - FORWARD - - - - -->    
+    
+    <View
+        android:id="@+id/popup_forward_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_lite_background" />
+
+    <RelativeLayout
+        android:id="@+id/popup_forward_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp" >
+
+        <ImageView
+            android:id="@+id/popup_forward_imageview"
+            style="@style/PopupImage"
+            android:src="@drawable/chat_menu_ic_forvard_right" />
+
+        <TextView
+            style="@style/PopupText"
+            android:layout_toRightOf="@+id/popup_forward_imageview"
+            android:text="@string/forward" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/popup_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#00000000"
+    android:orientation="vertical"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    tools:context=".activity.MainActivity" >
+
+    <RelativeLayout
+        android:id="@+id/popup_set_offline_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/popup_set_offline_imageview"
+            style="@style/PopupImage"
+            android:src="@drawable/def_ic_offline" />
+
+        <TextView
+            style="@style/PopupText"
+            android:layout_toRightOf="@+id/popup_set_offline_imageview"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/pager_off" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_lite_background" />
+
+    <RelativeLayout
+        android:id="@+id/popup_set_online_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/popup_set_online_imageview"
+            style="@style/PopupImage"
+            android:src="@drawable/def_ic_online" />
+
+        <TextView
+            style="@style/PopupText"
+            android:layout_toRightOf="@+id/popup_set_online_imageview"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/pager_on" />
+    </RelativeLayout>
+
+</LinearLayout>

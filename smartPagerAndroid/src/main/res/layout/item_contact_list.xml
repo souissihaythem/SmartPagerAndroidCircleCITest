@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@android:color/white"
+    android:gravity="center_vertical"
+    android:minHeight="@dimen/item_contact_height" >
+
+    <ImageView
+        android:id="@+id/item_message_status_imageView"
+        android:layout_width="@dimen/contact_photo_width"
+        android:layout_height="@dimen/contact_photo_height"
+        android:layout_marginLeft="@dimen/contact_photo_margin"
+        android:layout_marginRight="@dimen/contact_photo_margin"
+        android:layout_marginTop="@dimen/contact_photo_margin"
+        android:background="@color/border_contact_status"
+        android:cropToPadding="true"
+        android:maxHeight="@dimen/contact_photo_max_height"
+        android:maxWidth="@dimen/contact_photo_max_width"
+        android:padding="@dimen/contact_border"
+        android:scaleType="centerCrop"
+        android:src="@drawable/personal_info_empty_avatar" />
+
+    <TextView
+        android:id="@+id/item_contact_status_textView"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/contact_status_height"
+        android:layout_alignLeft="@+id/item_message_status_imageView"
+        android:layout_alignRight="@+id/item_message_status_imageView"
+        android:layout_below="@+id/item_message_status_imageView"
+        android:layout_marginBottom="@dimen/contact_status_margin_bottom"
+        android:layout_marginTop="-2dp"
+        android:background="@drawable/shape_contact_status"
+        android:minHeight="10dp" />
+
+    <TextView
+        android:id="@+id/item_message_contact_name_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/item_message_status_imageView"
+        android:layout_toRightOf="@+id/item_message_status_imageView"
+        android:singleLine="true"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/primary_text_default_material_dark"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/item_massage_them_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_message_contact_name_textView"
+        android:layout_toRightOf="@+id/item_message_status_imageView"
+        android:singleLine="true"
+        android:text="TextView"
+        android:textColor="@color/gray_item_message_text" />
+
+    <com.rey.material.widget.Button
+        app:v_styleId="@array/button_flat"
+        android:id="@+id/contact_item_page_button"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/contact_button_height"
+        android:layout_alignBottom="@id/item_contact_status_textView"
+        android:layout_alignLeft="@+id/item_massage_them_textView"
+        android:layout_marginRight="@dimen/contact_button_margin_between"
+        android:background="@color/gray_lite_background"
+        android:focusable="false"
+        android:minHeight="0dp"
+        android:minWidth="@dimen/contact_button_width"
+        android:text="@string/compose"
+        android:textStyle="bold" />
+
+    <com.rey.material.widget.Button
+        app:v_styleId="@array/button_flat"
+        android:id="@+id/contact_item_call_button"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/contact_button_height"
+        android:layout_alignBaseline="@+id/contact_item_page_button"
+        android:layout_alignBottom="@+id/contact_item_page_button"
+        android:layout_toRightOf="@+id/contact_item_page_button"
+        android:background="@color/colorPrimary"
+        android:focusable="false"
+        android:minHeight="0dp"
+        android:minWidth="@dimen/contact_button_width"
+        android:text="@string/call"
+        android:textStyle="bold" />
+
+</RelativeLayout>

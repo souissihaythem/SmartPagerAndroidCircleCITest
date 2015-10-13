@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/item_send_logs"
+        android:icon="@drawable/send_icon"
+        android:orderInCategory="900"
+        android:showAsAction="always"
+        android:title="@string/send_logcat"/>
+</menu>

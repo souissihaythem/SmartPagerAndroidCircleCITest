@@ -1,0 +1,140 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_item_contact_background" >
+
+    <!-- GROUP IMAGE -->
+
+    <ImageView
+        android:id="@+id/group_details_imageView"
+        android:layout_width="@dimen/contact_photo_width"
+        android:layout_height="@dimen/contact_photo_height"
+        android:layout_marginLeft="@dimen/contact_photo_margin"
+        android:layout_marginRight="@dimen/contact_photo_margin"
+        android:layout_marginTop="@dimen/contact_photo_margin"
+        android:cropToPadding="true"
+        android:maxHeight="@dimen/contact_photo_max_height"
+        android:maxWidth="@dimen/contact_photo_max_width"
+        android:src="@drawable/contacts_ic_group_static" />
+    <!-- =================================================================== -->
+    <!-- GROUP DATA -->
+    <!-- NAME -->
+
+    <EditText
+        android:id="@+id/group_details_name_editText"
+        style="@style/style_page_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="@dimen/contact_details_footer_line_margin"
+        android:layout_marginTop="@dimen/contact_details_name_top_margin"
+        android:layout_toRightOf="@id/group_details_imageView"
+        android:hint="@string/group_name"
+        android:singleLine="true"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColorHint="@color/gray_lite_text" />
+
+    <View
+        android:id="@+id/group_details_name_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/contact_border"
+        android:layout_below="@id/group_details_name_editText"
+        android:layout_marginRight="@dimen/contact_details_footer_line_margin"
+        android:layout_toRightOf="@id/group_details_imageView"
+        android:background="@color/border_contact_status" />
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <!-- GROUP TYPE -->
+
+    <TextView
+        android:id="@+id/group_details_type_caption_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/group_details_name_line"
+        android:layout_marginLeft="@dimen/contact_details_data_left_margin"
+        android:layout_marginTop="@dimen/contact_details_data_top_margin"
+        android:layout_toRightOf="@id/group_details_imageView"
+        android:singleLine="true"
+        android:text="@string/group_type"
+        android:textColor="@color/gray_item_message_text" />
+
+    <TextView
+        android:id="@+id/group_details_type_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/group_details_type_caption_textView"
+        android:layout_marginBottom="@dimen/contact_details_data_bottom_margin"
+        android:layout_marginLeft="@dimen/contact_details_data_left_margin"
+        android:layout_marginTop="@dimen/contact_details_data_between_margin"
+        android:layout_toRightOf="@id/group_details_imageView"
+        android:singleLine="true"
+        android:text="LOCAL"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/primary_text_default_material_dark"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/group_details_type_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/contact_border"
+        android:layout_below="@id/group_details_type_textView"
+        android:layout_marginRight="@dimen/contact_details_footer_line_margin"
+        android:layout_toRightOf="@id/group_details_imageView"
+        android:background="@color/border_contact_status" />
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <!-- MEMBERS -->
+
+    <TextView
+        android:id="@+id/group_details_members_caption_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/group_details_type_line"
+        android:layout_marginLeft="@dimen/contact_details_data_left_margin"
+        android:layout_marginTop="@dimen/contact_details_data_top_margin"
+        android:layout_toRightOf="@id/group_details_imageView"
+        android:singleLine="true"
+        android:text="@string/members"
+        android:textColor="@color/gray_item_message_text" />
+
+	<ListView
+	    android:id="@+id/edit_group_members_listView"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:dividerHeight="3dp"
+	    android:divider="@null"
+	    android:layout_above="@+id/group_details_footer_line"
+	    android:layout_alignRight="@id/group_details_footer_line"
+	    android:layout_below="@+id/group_details_members_caption_textView"
+	    android:layout_marginTop="@dimen/contact_details_departments_between_margin"
+	    android:layout_toRightOf="@+id/group_details_imageView" />
+    
+    <!-- =================================================================== -->
+    <!-- BUTTON FOOTER -->
+
+    <View
+        android:id="@id/group_details_footer_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/contact_border"
+        android:layout_above="@+id/new_group_create_button"
+        android:layout_marginLeft="@dimen/contact_details_footer_line_margin"
+        android:layout_marginRight="@dimen/contact_details_footer_line_margin"
+        android:background="@color/border_contact_status" />
+
+    <com.rey.material.widget.Button
+        app:v_styleId="@array/button_flat"
+        android:id="@+id/new_group_save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/contact_details_button_side_margin"
+        android:background="@drawable/selector_gray_page_button"
+        android:minHeight="@dimen/group_details_button_height"
+        android:text="@string/save_changes"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/border_contact_status" />
+
+</RelativeLayout>

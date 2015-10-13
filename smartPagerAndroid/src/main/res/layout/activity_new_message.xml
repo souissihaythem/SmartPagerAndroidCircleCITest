@@ -1,0 +1,239 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ScrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_page_content"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    tools:context="net.smartpager.android.activity.NewMessageActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <biz.mobidev.framework.view.ExpandableHeightGridView
+            android:id="@+id/page_recipients_gridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray_page_header"
+            android:horizontalSpacing="4dp"
+            android:numColumns="2"
+            android:verticalSpacing="4dp" />
+
+        <RelativeLayout
+            android:id="@+id/page_header_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray_page_header"
+            android:padding="@dimen/page_side_padding" >
+
+            <com.rey.material.widget.ImageButton
+                android:id="@+id/page_add_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/selector_page_plus_button"
+                android:src="@drawable/content_new_red" />
+
+            <net.smartpager.android.view.SafeAutoCompleteTextView
+                android:id="@+id/page_to_text"
+                style="@style/style_red_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@id/page_add_button"
+                android:hint="@string/hint_to"
+                android:inputType="text|textPersonName"
+                android:completionThreshold = "1"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <RelativeLayout
+                android:id="@+id/page_subject_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/page_to_text">
+                <com.rey.material.widget.ImageButton
+                    android:id="@+id/message_type_add_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/selector_page_plus_button"
+                    android:src="@drawable/content_new_red" />
+
+                <EditText
+                    android:id="@+id/page_subject_edit_text"
+                    style="@style/style_red_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@id/message_type_add_button"
+                    android:hint="@string/hint_subject"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium" /> <!--
+                    android:layout_marginTop="@dimen/page_top_margin" -->
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/call_back_number"
+                style="@style/style_red_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/page_subject_layout"
+                android:hint="@string/call_back_number_required"
+                android:singleLine="true"
+                android:visibility="gone"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            
+            <LinearLayout
+                android:id="@+id/fields"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/call_back_number"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/page_buttons_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fields"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/page_side_padding"
+                android:layout_marginBottom="@dimen/page_side_padding"
+                android:background="@android:color/transparent" >
+
+                <com.rey.material.widget.Button
+                    android:layout_weight="1"
+                    android:id="@+id/page_record_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/page_button_between_margin"
+                    android:background="@drawable/selector_page_new_item_button"
+                    android:drawableTop="@drawable/new_message_ic_record"
+                    android:minHeight="@dimen/page_button_size"
+                    android:minWidth="@dimen/page_button_size"
+                    android:paddingBottom="@dimen/page_button_padding"
+                    android:paddingTop="@dimen/page_button_padding"
+                    android:text="@string/record"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/white_text" />
+
+                <com.rey.material.widget.Button
+                    android:layout_weight="1"
+                    android:id="@+id/page_attach_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/page_button_between_margin"
+                    android:background="@drawable/selector_page_new_item_button"
+                    android:drawableTop="@drawable/new_message_ic_attach"
+                    android:minHeight="@dimen/page_button_size"
+                    android:minWidth="@dimen/page_button_size"
+                    android:paddingBottom="@dimen/page_button_padding"
+                    android:paddingTop="@dimen/page_button_padding"
+                    android:text="@string/attach"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/white_text" />
+
+                <com.rey.material.widget.Button
+                    android:layout_weight="1"
+                    android:id="@+id/page_quick_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/page_button_between_margin"
+                    android:background="@drawable/selector_page_new_item_button"
+                    android:drawableTop="@drawable/new_message_ic_quick"
+                    android:minHeight="@dimen/page_button_size"
+                    android:minWidth="@dimen/page_button_size"
+                    android:paddingBottom="@dimen/page_button_padding"
+                    android:paddingTop="@dimen/page_button_padding"
+                    android:text="@string/quick"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/white_text" />
+
+                <com.rey.material.widget.Button
+                    android:layout_weight="1"
+                    android:id="@+id/page_options_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_page_new_item_button"
+                    android:drawableTop="@drawable/new_message_ic_options"
+                    android:minHeight="@dimen/page_button_size"
+                    android:minWidth="@dimen/page_button_size"
+                    android:paddingBottom="@dimen/page_button_padding"
+                    android:paddingTop="@dimen/page_button_padding"
+                    android:text="@string/options"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/white_text" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- ==================================================== -->
+
+
+        <!-- MULTIMEDIA ATTACHMENT -->
+
+
+        <biz.mobidev.framework.view.ExpandableHeightGridView
+            android:id="@+id/page_images_grid_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:columnWidth="90dp"
+            android:horizontalSpacing="10dp"
+            android:numColumns="auto_fit"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="10dp" />
+
+        <include
+            android:id="@+id/player"
+            layout="@layout/include_player" />
+
+        <!-- ==================================================== -->
+        <!-- CONTENT -->
+
+        <RelativeLayout
+            android:id="@+id/page_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray_page_content"
+            android:padding="@dimen/panel_horizontal_margin"
+            android:paddingTop="0dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" >
+
+            <EditText
+                android:id="@+id/page_message_edit_text"
+                style="@style/style_red_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/page_send_button"
+                android:hint="@string/hint_type_new_message"
+                android:imeOptions="actionSend"
+                android:inputType="textMultiLine"
+                android:scrollHorizontally="false"
+                android:singleLine="false"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <com.rey.material.widget.ImageButton
+                android:id="@+id/page_send_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:padding="10dp"
+                android:background="@drawable/selector_page_send_button"
+                android:src="@drawable/ic_action_send" />
+        </RelativeLayout>
+        <!-- ==================================================== -->
+    </LinearLayout>
+
+</ScrollView>

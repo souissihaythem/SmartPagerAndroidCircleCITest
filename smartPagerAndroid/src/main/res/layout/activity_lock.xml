@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    >
+
+    <LinearLayout
+        android:id="@+id/texts_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/lock_number_textview"
+            style="@style/style_big_gray_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/panel_vertical_margin"
+            android:text="Phone Number"
+            android:textColor="@color/red" />
+        
+        <TextView
+            style="@style/style_big_gray_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom|center_horizontal"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text="@string/number_has_been_locked" />
+
+        <TextView
+            style="@style/style_big_gray_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom|center_horizontal"
+            android:maxLines="4"
+            android:singleLine="false"
+            android:text="@string/please_contact_admin" />
+
+        <TextView
+            android:id="@+id/lock_tv_unlock_title"
+            style="@style/style_big_gray_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/settings_text_top_margin_single_caption"
+            android:layout_marginRight="10dp"
+            android:text="@string/unlock_question_notif"
+            android:visibility="gone"/>
+
+        <com.rey.material.widget.Button
+            app:v_styleId="@array/button_flat"
+            android:id="@+id/lock_btn_unlock"
+            style="@style/style_green_next_button"
+            android:text="@string/btn_unlock_question"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+</RelativeLayout>

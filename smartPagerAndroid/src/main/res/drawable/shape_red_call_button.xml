@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <stroke
+        android:width="@dimen/contact_border"
+        android:color="@color/red_button_end" />
+
+    <solid
+        android:color="@color/red_msg_read_status" />
+
+</shape>

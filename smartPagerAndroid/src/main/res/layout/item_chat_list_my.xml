@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:descendantFocusability="blocksDescendants"
+    android:paddingLeft="@dimen/contact_details_data_left_margin" >
+
+    <RelativeLayout
+        android:id="@+id/item_chat_message_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="@dimen/contact_details_data_left_margin"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/chat_white_bubble_right"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:id="@+id/item_chat_signature_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/me"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/item_chat_date_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/timer_zero_value"
+            android:textSize="11sp" />
+
+        <include
+            android:id="@+id/player"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_chat_signature_text_view"
+            layout="@layout/include_player_chat" />
+
+
+        <include
+            android:id="@+id/item_chat_image_framelayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/player"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            layout="@layout/include_chat_image_framelayout" />
+
+        <TextView
+            android:id="@+id/item_chat_message_caption_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_chat_image_framelayout"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/item_chat_message_body_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_chat_message_caption_text_view"
+            android:textSize="15sp" />
+
+        <View
+            android:id="@+id/item_chat_line"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_below="@id/item_chat_message_body_text_view"
+            android:background="#50000000" />
+        <include
+            android:id="@+id/item_chat_bt_show_recipients"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/item_chat_line"
+            layout="@layout/include_chat_bt_show_recipients"/>
+
+        <TextView
+            android:id="@+id/item_chat_accepted_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/item_chat_call_button"
+            android:gravity="right"
+			android:textSize="13sp"
+            android:visibility="visible"
+            style="@style/TextViewClipItalicTextSolution"/>
+
+        <com.rey.material.widget.Button
+            app:v_styleId="@array/button_flat"
+            android:id="@+id/item_chat_call_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/item_chat_message_body_text_view"
+            android:layout_below="@+id/item_chat_message_body_text_view"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/shape_green_call_button"
+            android:minHeight="0dp"
+            android:textColor="@color/white_text"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

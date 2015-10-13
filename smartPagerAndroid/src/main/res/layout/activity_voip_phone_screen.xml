@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <TextView
+        android:id="@+id/tv_voip_number_to_call"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:text="Large Text"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="#CCFFFFFF"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+    <TextView
+        android:id="@+id/tv_voip_status"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="#CC1F75FE"
+        android:textColor="#FFFFFF"
+        android:paddingRight="20dp"
+        android:gravity="center_vertical|right"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_voip_number_to_call"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_above="@+id/voip_phone_screen_hangup_btn" >
+
+        <ImageView
+            android:id="@+id/iv_speaker_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/device_access_volume_on"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp" />
+
+        <ImageView
+            android:id="@+id/iv_mic_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/device_access_mic_muted"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp" />
+        
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/voip_phone_screen_hangup_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="#CCFF0000"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_dial_action_hangup" />
+
+    </RelativeLayout>
+
+    
+
+</RelativeLayout>

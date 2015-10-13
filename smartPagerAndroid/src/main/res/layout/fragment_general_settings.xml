@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/settings_dark_gray_background" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/settings_top_margin" >
+
+        <!-- ===================================================================== -->
+        <!-- MY PROFILE -->
+
+        <include layout="@layout/include_settings_separator" />
+
+        <RelativeLayout
+            android:id="@+id/settings_my_profile_layout"
+            style="@style/RelativeLayoutClickableSettings" >
+
+            <ImageView
+                android:id="@+id/settings_my_profile_image"
+                style="@style/IconImageSettings"
+                android:src="@drawable/settings_ic_my_profile" />
+
+            <TextView
+                android:id="@+id/settings_my_profile_text"
+                style="@style/SingleCaptionSettings"
+                android:layout_toRightOf="@id/settings_my_profile_image"
+                android:text="@string/settings_my_profile" />
+        </RelativeLayout>
+        <!-- ===================================================================== -->
+        <!-- ARCHIVE SETTINGS -->
+
+        <include layout="@layout/include_settings_separator" />
+
+        <RelativeLayout
+            android:id="@+id/settings_archive_layout"
+            style="@style/RelativeLayoutClickableSettings" >
+
+            <ImageView
+                android:id="@+id/settings_archive_image"
+                style="@style/IconImageSettings"
+                android:src="@drawable/settings_ic_archive" />
+
+            <TextView
+                android:id="@+id/settings_archive_text"
+                style="@style/SingleCaptionSettings"
+                android:layout_toRightOf="@id/settings_archive_image"
+                android:text="@string/settings_archive_settings" />
+        </RelativeLayout>
+        <!-- ===================================================================== -->
+        <!-- PIN SETTINGS -->
+
+        <include layout="@layout/include_settings_separator" />
+
+        <RelativeLayout
+            android:id="@+id/settings_pin_layout"
+            style="@style/RelativeLayoutClickableSettings" >
+
+            <ImageView
+                android:id="@+id/settings_pin_image"
+                style="@style/IconImageSettings"
+                android:src="@drawable/settings_ic_pin_settings" />
+
+            <TextView
+                android:id="@+id/settings_pin_text"
+                style="@style/SingleCaptionSettings"
+                android:layout_toRightOf="@id/settings_pin_image"
+                android:text="@string/settings_pin_settings" />
+        </RelativeLayout>
+        <!-- ===================================================================== -->
+        <!-- QUICK RESPONSE -->
+
+        <include layout="@layout/include_settings_separator" />
+
+        <RelativeLayout
+            android:id="@+id/settings_quick_responses_layout"
+            style="@style/RelativeLayoutClickableSettings" >
+
+            <ImageView
+                android:id="@+id/settings_quick_responses_image"
+                style="@style/IconImageSettings"
+                android:src="@drawable/settings_ic_quick_responses" />
+
+            <TextView
+                android:id="@+id/settings_quick_responses_text"
+                style="@style/SingleCaptionSettings"
+                android:layout_toRightOf="@id/settings_quick_responses_image"
+                android:text="@string/settings_quick_responses" />
+        </RelativeLayout>
+        <!-- ===================================================================== -->
+        <!-- AUTO TEXT RESPONSE -->
+
+        <include layout="@layout/include_settings_separator" />
+
+        <RelativeLayout
+            android:id="@+id/settings_auto_text_response_layout"
+            style="@style/RelativeLayoutClickableSettings" >
+
+            <ImageView
+                android:id="@+id/settings_auto_text_response_image"
+                style="@style/IconImageSettings"
+                android:src="@drawable/settings_ic_auto_text_response" />
+
+            <TextView
+                android:id="@+id/settings_auto_text_response_text"
+                style="@style/CaptionSettings"
+                android:layout_toRightOf="@id/settings_auto_text_response_image"
+                android:text="@string/settings_auto_text_response" />
+
+            <TextView
+                android:id="@+id/settings_auto_text_response_description"
+                style="@style/DescriptionSettings"
+                android:layout_toRightOf="@id/settings_auto_text_response_image"
+                android:layout_marginRight="@dimen/settings_horizontal_margin"
+                android:text="I get up at seven o&apos;clock......." />
+        </RelativeLayout>
+        <!-- ===================================================================== -->
+        <!-- FORWARD PAGES -->
+
+        <include layout="@layout/include_settings_separator" />
+
+        <RelativeLayout
+            android:id="@+id/settings_forward_pages_layout"
+            style="@style/RelativeLayoutClickableSettings" >
+
+            <ImageView
+                android:id="@+id/settings_forward_pages_image"
+                style="@style/IconImageSettings"
+                android:src="@drawable/settings_ic_forward_pages" />
+
+            <TextView
+                android:id="@+id/settings_forward_pages_text"
+                style="@style/CaptionSettings"
+                android:layout_toRightOf="@id/settings_forward_pages_image"
+                android:text="@string/settings_forward_pages" />
+
+            <TextView
+                android:id="@+id/settings_forward_pages_description"
+                style="@style/DescriptionSettings"
+                android:layout_toRightOf="@id/settings_forward_pages_image"
+                android:layout_marginRight="@dimen/settings_horizontal_margin"
+                android:text="Forward to Ben Moore" />
+        </RelativeLayout>
+        <!-- ===================================================================== -->
+
+        <include layout="@layout/include_settings_separator" />
+    </LinearLayout>
+
+</ScrollView>

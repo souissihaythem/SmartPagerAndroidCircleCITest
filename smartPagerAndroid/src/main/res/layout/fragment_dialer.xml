@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2011 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:background="@android:color/white" >
+
+    <LinearLayout android:id="@+id/digits_container"
+                  android:layout_width="match_parent"
+                  android:layout_height="47dp"
+                  android:orientation="horizontal">
+
+        <view class="net.smartpager.android.dialer.DigitsEditText"
+              android:id="@+id/digits"
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:paddingLeft="16dp"
+              android:scrollHorizontally="true"
+              android:singleLine="true"
+              android:layout_weight="1"
+              android:gravity="center"
+              android:background="@android:color/transparent"
+              android:maxLines="1"
+              android:maxLength="14"
+              android:textSize="36sp"
+              android:freezesText="true"
+              android:focusableInTouchMode="true"
+              android:editable="true"
+              android:cursorVisible="false"
+              android:textColor="@color/primary_text_default_material_dark"
+              android:textCursorDrawable="@null"
+              android:fontFamily="sans-serif-light"
+              android:textStyle="normal" />
+
+        <ImageButton
+                android:id="@+id/deleteButton"
+                android:paddingLeft="16sp"
+                android:paddingRight="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:state_enabled="false"
+                android:background="@android:color/transparent"
+                android:contentDescription="Delete"
+                android:src="@drawable/ic_dial_action_delete" />
+    </LinearLayout>
+
+    <TableLayout android:id="@+id/dialpad"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:paddingLeft="5dp"
+                 android:paddingRight="5dp"
+                 android:stretchColumns="*"
+                 android:layoutDirection="ltr" >
+
+        <TableRow>
+            <include layout="@layout/dialpad_key" android:id="@+id/one"/>
+            <include layout="@layout/dialpad_key" android:id="@+id/two"/>
+            <include layout="@layout/dialpad_key" android:id="@+id/three"/>
+        </TableRow>
+
+        <TableRow>
+            <include layout="@layout/dialpad_key" android:id="@+id/four"/>
+            <include layout="@layout/dialpad_key" android:id="@+id/five"/>
+            <include layout="@layout/dialpad_key" android:id="@+id/six"/>
+        </TableRow>
+
+        <TableRow>
+            <include layout="@layout/dialpad_key" android:id="@+id/seven"/>
+            <include layout="@layout/dialpad_key" android:id="@+id/eight"/>
+            <include layout="@layout/dialpad_key" android:id="@+id/nine"/>
+        </TableRow>
+
+        <TableRow>
+            <net.smartpager.android.dialer.DialpadKeyButton
+                    android:id="@+id/star"
+                    style="@style/DialpadKeyButtonStyle">
+                <LinearLayout
+                        style="@style/DialpadKeyInternalLayoutStyle">
+                    <TextView
+                            android:id="@+id/dialpad_key_number"
+                            style="@style/DialpadKeyStarPoundStyle" />
+                    <View
+                            android:layout_height="match_parent"
+                            android:layout_width="50dp" />
+                </LinearLayout>
+            </net.smartpager.android.dialer.DialpadKeyButton>
+            <include layout="@layout/dialpad_key" android:id="@+id/zero"/>
+            <net.smartpager.android.dialer.DialpadKeyButton
+                    android:id="@+id/pound"
+                    style="@style/DialpadKeyButtonStyle">
+                <LinearLayout
+                        style="@style/DialpadKeyInternalLayoutStyle">
+                    <TextView
+                            android:id="@id/dialpad_key_number"
+                            style="@style/DialpadKeyStarPoundStyle" />
+                    <View
+                            android:layout_height="match_parent"
+                            android:layout_width="50dp" />
+                </LinearLayout>
+            </net.smartpager.android.dialer.DialpadKeyButton>
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout android:id="@+id/call_button"
+         	android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:layout_marginTop="10dp"
+                  android:layout_gravity="center_horizontal"
+                  android:gravity="center_horizontal"
+                  android:background="@color/colorPrimary">
+
+        <ImageView 
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:paddingTop="10dp"
+                   android:paddingBottom="10dp"
+                   android:src="@drawable/ic_dial_action_call"/>
+
+    </LinearLayout>
+    
+    <!-- ===================================================================== -->
+        <!-- VOIP -->
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/dialer_voip_switch_label"
+                style="@style/CaptionPagerSettings"
+                android:text="@string/settings_voip" />
+
+            <Switch
+                android:id="@+id/dialer_voip_switch"
+                android:switchTextAppearance="@style/SwitchTextAppearance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/settings_text_pager_margin"
+                android:checked="true"
+                android:thumb="@drawable/switch_inner_red"
+                android:track="@drawable/switch_track_red" 
+                />
+        </RelativeLayout>
+        
+</LinearLayout>

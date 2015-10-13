@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:background="@drawable/shape_dialog_background"
+    >
+
+    <TextView
+        android:id="@+id/dialog_title_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"        
+        android:padding="@dimen/dialog_title_padding"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white_text"
+        android:background="@color/panel_gray_background"
+        android:layout_margin="@dimen/dialog_border"
+        android:singleLine="true"
+        android:text="Title" />
+    
+    <TextView
+        android:id="@+id/dialog_message_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dialog_message_margin"
+        android:layout_marginRight="@dimen/dialog_message_margin"
+        android:layout_marginLeft="@dimen/dialog_message_margin"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/primary_text_default_material_dark"
+        android:singleLine="false"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:text="Message" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <com.rey.material.widget.Button
+            app:v_styleId="@array/button_flat"
+            android:id="@+id/dialog_ok_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dialog_button_margin"
+            android:layout_marginLeft="@dimen/dialog_button_margin"
+            android:layout_marginRight="@dimen/dialog_button_margin_center"
+            android:layout_marginTop="@dimen/dialog_button_margin"
+            android:background="@drawable/selector_no_button"
+            android:minHeight="@dimen/dialog_button_minHeight"
+            android:minWidth="@dimen/dialog_button_minWidth"
+            android:text="@string/yes"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/white_text" />
+
+        <com.rey.material.widget.Button
+            app:v_styleId="@array/button_flat"
+            android:id="@+id/dialog_no_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dialog_button_margin"
+            android:layout_marginLeft="@dimen/dialog_button_margin_center"
+            android:layout_marginRight="@dimen/dialog_button_margin"
+            android:layout_marginTop="@dimen/dialog_button_margin"
+            android:background="@drawable/selector_red_buttom"
+            android:minHeight="@dimen/dialog_button_minHeight"
+            android:minWidth="@dimen/dialog_button_minWidth"
+            android:text="@string/no"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/white_text" />
+
+    </LinearLayout>
+
+</LinearLayout>

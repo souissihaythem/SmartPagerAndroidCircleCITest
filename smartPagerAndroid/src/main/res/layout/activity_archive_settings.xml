@@ -1,0 +1,112 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/settings_dark_gray_background" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/settings_text_top_margin_single_caption" >
+
+        <!-- ===================================================================== -->
+        <!-- ARCHIVE MESSAGES -->
+
+        <TextView
+            style="@style/CaptionCapitalPagerSettings"
+            android:text="@string/settings_archive_messages" />
+
+        <include layout="@layout/include_settings_separator_bold" />
+
+        <TextView
+            style="@style/CaptionPagerSettings"
+            android:layout_marginTop="@dimen/settings_horizontal_margin"
+            android:text="@string/settings_after" />
+        
+        <TextView
+            android:id="@+id/settings_archive_messages_disabled"
+			android:gravity="center"
+            android:textColor="#FF0000"
+            android:textStyle="italic"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RadioGroup
+            android:id="@+id/settings_archive_messages_radiogroup"
+            style="@style/RadiogroupSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            
+            <RadioButton
+                android:id="@+id/settings_archive_messages_1h"
+                style="@style/RadiobuttonsSettings"
+                android:text="@string/settings__1_hour" />
+
+            <RadioButton
+                android:id="@+id/settings_archive_messages_1d"
+                style="@style/RadiobuttonsSettings"
+                android:text="@string/settings_1_day" />
+
+            <RadioButton
+                android:id="@+id/settings_archive_messages_1w"
+                style="@style/RadiobuttonsSettings"
+                android:text="@string/settings_1_week" />
+            
+        </RadioGroup>
+
+        <include layout="@layout/include_settings_separator" />
+        <!-- ===================================================================== -->
+        <!-- REMOVE FROM ARCHIVE -->
+
+        <TextView
+            style="@style/CaptionCapitalPagerSettings"
+            android:layout_marginTop="@dimen/settings_caption_capital_margin_top"
+            android:text="@string/settings_remove_from_archive" />
+
+        <include layout="@layout/include_settings_separator_bold" />
+
+        <TextView
+            style="@style/CaptionPagerSettings"
+            android:layout_marginTop="@dimen/settings_horizontal_margin"
+            android:text="@string/settings_after" />
+        
+        <TextView
+            android:id="@+id/settings_remove_archive_disabled"
+			android:gravity="center"
+            android:textColor="#FF0000"
+            android:textStyle="italic"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RadioGroup
+            android:id="@+id/settings_remove_archive_radiogroup"
+            style="@style/RadiogroupSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            
+            <RadioButton
+                android:id="@+id/settings_remove_archive_messages_1d"
+                style="@style/RadiobuttonsSettings"
+                android:text="@string/settings_1_day" />
+
+            <RadioButton
+                android:id="@+id/settings_remove_archive_messages_1w"
+                style="@style/RadiobuttonsSettings"
+                android:text="@string/settings_1_week" />
+
+            <RadioButton
+                android:id="@+id/settings_remove_archive_messages_1m"
+                style="@style/RadiobuttonsSettings"
+                android:text="@string/settings_1_month" />
+            
+        </RadioGroup>
+
+        <include layout="@layout/include_settings_separator" />
+
+        <!-- ===================================================================== -->
+    </LinearLayout>
+
+</ScrollView>

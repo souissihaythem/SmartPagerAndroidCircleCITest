@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_to_image_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/gray_item_contact_background"
+    android:gravity="center_vertical" >
+
+    <ImageView
+        android:id="@+id/item_to_image_imageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="@dimen/contact_photo_margin"
+        android:layout_marginRight="@dimen/contact_photo_margin"
+        android:layout_marginTop="@dimen/contact_status_margin_bottom"
+        android:background="@color/border_contact_status"
+        android:cropToPadding="true"
+        android:maxHeight="@dimen/contact_photo_max_height"
+        android:maxWidth="@dimen/contact_photo_max_width"
+        android:padding="@dimen/contact_border"
+        android:scaleType="centerCrop"
+        android:src="@drawable/personal_info_empty_avatar" />
+
+    <TextView
+        android:id="@+id/item_to_status_textView"
+        android:layout_width="0dp"
+        android:layout_height="7dp"
+        android:layout_alignLeft="@id/item_to_image_imageView"
+        android:layout_alignRight="@id/item_to_image_imageView"
+        android:layout_below="@id/item_to_image_imageView"
+        android:layout_marginBottom="@dimen/contact_status_margin_bottom"
+        android:layout_marginTop="-2dp"
+        android:background="@drawable/shape_contact_status"
+        android:maxHeight="5dp" />
+
+    <TextView
+        android:id="@+id/item_to_contact_name_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/contact_status_margin_bottom"
+        android:layout_toRightOf="@id/item_to_image_imageView"
+        android:singleLine="true"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/primary_text_default_material_dark"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/item_to_description_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_to_contact_name_textView"
+        android:layout_toRightOf="@id/item_to_image_imageView"
+        android:singleLine="true"
+        android:textColor="@color/gray_item_message_text" />
+
+</RelativeLayout>

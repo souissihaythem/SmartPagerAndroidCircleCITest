@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--<color name="red_header">#8f2014</color>
+    <color name="red">#ff0000</color>
+    <color name="red_msg_read_status">#c01a1a</color>-->
+	<color name="red_header">@color/colorPrimaryDark</color>
+	<color name="red">@color/colorAccent</color>
+	<color name="red_msg_read_status">@color/colorPrimary</color>
+    <color name="black_header">#000000</color>
+    <color name="white_text">#ffffff</color>
+    <!--<color name="gray_lite_text">#cccccc</color>-->
+	<color name="gray_lite_text">@color/primary_text_default_material_dark</color>
+    <!--<color name="gray_background">#262626</color>-->
+
+	<color name="gray_background">@android:color/white</color>
+    <color name="gray_lite_background">#999999</color>
+    <color name="gray_midle_background">#b8b8b8</color>
+    <!--<color name="panel_gray_background">#3c3c3c</color>-->
+	<color name="panel_gray_background">@color/colorPrimary</color>
+    <color name="panel_gradient_background_start">#9c9c9c</color>
+    <color name="panel_gradient_background_end">#666666</color>
+    <color name="black_color">#000000</color>
+    <color name="panel_stroke_color">#0c0c0c</color>
+    <color name="registrate_tab_text">#ffffff</color>
+
+	<color name="blue_light_middle_background">#c7e9f7</color>
+    
+    <!--<color name="red_button_start">#a42417</color>
+    <color name="red_button_end">#84180d</color>
+    <color name="red_button_stroke">#400a0a</color>-->
+	<color name="red_button_start">@color/colorAccent</color>
+	<color name="red_button_end">@color/colorPrimary</color>
+	<color name="red_button_stroke">@color/colorPrimaryDark</color>
+    
+    <!--<color name="green_button_start">#84c12d</color>
+    <color name="green_button_end">#48840d</color>-->
+	<color name="green_button_start">@color/colorPrimary</color>
+	<color name="green_button_end">@color/colorPrimaryDark</color>
+    <color name="green_button_stroke">#212c05</color>
+	<color name="item_gray_background">#616161</color>
+	<color name="time_color">#367ec2</color>
+	
+	<color name = "green_contact_status">#3AA655</color>
+	<color name = "red_contact_status">#E12C2C</color>
+	<color name = "gray_item_message_text">#c4c4c4</color>
+	<!--<color name = "gray_item_contact_background">#636363</color>-->
+	<color name = "gray_item_contact_background">@android:color/white</color>
+	<color name = "border_contact_status">#434343</color>
+	<color name = "gray_big_button">#646464</color>
+	<color name = "gray_big_button_border">#101010</color>
+	<color name = "gray_button">#a1a1a1</color>
+	<color name = "gray_button_border">#505050</color>	
+	<!--<color name = "green_button">#83ac21</color>
+	<color name = "green_button_border">#2e6210</color>-->
+	<color name = "green_button">@color/colorPrimary</color>
+	<color name = "green_button_border">@color/colorPrimaryDark</color>
+	<color name = "gray_bottom_line">#c6c6c6</color>
+	
+	<!--<color name = "gray_page_header">#282828</color>-->
+	<color name = "gray_page_header">@android:color/white</color>
+	<color name = "gray_page_plus_pressed">#ff4a4a4a</color>
+	<color name = "gray_page_button">#646464</color>
+	<!--<color name = "gray_page_content">#dcdcdc</color>-->
+	<color name = "gray_page_content">@android:color/white</color>
+	
+	
+	<color name = "sliding_lite_bottom_line_color">#c7c7c7</color>
+	<color name = "sliding_dark_bottom_line_color">#383838</color>
+	<color name = "sliding_dark_top_line_color">#1e1e1e</color>
+	<color name = "sliding_handle_dark_gradient">#575757</color>
+	<color name = "sliding_handle_light_gradient">#747474</color>
+	<color name = "sliding_content_background">#b9b9b9</color>
+	
+	<color name = "settings_gray_line">#3e3e3e</color>
+	<!--<color name = "settings_gray_text">#b8b8b8</color>-->
+	<color name = "settings_gray_text">@color/primary_text_default_material_dark</color>
+	<!--<color name = "settings_dark_gray_background">#282828</color>-->
+	<color name = "settings_dark_gray_background">@android:color/white</color>
+	<!--<color name = "settings_red_selected_background">#aa2214</color>-->
+	<color name = "settings_red_selected_background">@color/colorPrimary</color>
+	<color name = "settings_radiobutton_border">#000000</color>
+	<!--<color name = "settings_radiobutton_checked">#670e06</color>-->
+	<color name = "settings_radiobutton_checked">@color/colorPrimary</color>
+	<color name = "settings_radiobutton_unchecked">#4f4f4f</color>
+	<!--<color name = "settings_seekbar_background">#670e06</color>-->
+	<color name = "settings_seekbar_background">#e9e9e9</color>
+	<!--<color name = "settings_seekbar_progress_secondary">#a4272f</color>-->
+	<color name = "settings_seekbar_progress_secondary">@color/colorAccent</color>
+	<!--<color name = "settings_seekbar_progress">#a4272f</color>-->
+	<color name = "settings_seekbar_progress">@color/colorAccent</color>
+
+	<color name = "quick_response_item_text">#969696</color>
+	
+	<color name = "round_button_border_gray">#707070</color>
+	<!--<color name = "round_button_border_red">#a21212</color>-->
+	<color name = "round_button_border_red">@color/colorPrimary</color>
+	<color name = "round_button_gradient_dark_gray">#d2d2d2</color>
+	<color name = "round_button_gradient_light_gray">#f0f0f0</color>
+
+	<color name = "recorder_text_color">#909090</color>
+	<color name = "recorder_layout_color">#e4e4e4</color>
+
+	<color name = "player_chat_gradient_light">#f5f5f5</color>
+	<color name = "player_chat_gradient_dark">#cbcbcb</color>
+	<color name = "player_chat_border">#5d5d5d</color>
+	<color name = "player_chat_background">#320907</color>
+	<!--<color name ="color1">#a4262e</color>-->
+	<color name ="color1">@color/colorPrimary</color>
+	<color name="color2">#6ec1df</color>
+	<color name="color3">#8ec644</color>
+	<color name="color4">#6a4a7f</color>
+	<color name="color5">#ffe400</color>
+	
+	<color name="options_text">#6b6b6b</color>
+	<!--<color name="options_background">#dcdcdc</color>-->
+	<color name="options_background">@android:color/white</color>
+	<color name="options_separator">#a5a5a5</color>
+
+    <color name="semitransparent_black">#99000000</color>
+    
+        <!-- Background color of dialpad -->
+    <color name="background_dialpad">#ffffff</color>
+    <!-- Pressed color of dialpad buttons -->
+    <color name="background_dialpad_pressed">#cccccc</color>
+
+
+	<!-- materail design colors -->
+	<color name="colorPrimary">#40b4e5</color>
+	<color name="colorPrimaryDark">#ff0171c9</color>
+	<color name="colorAccent">#FFc7e9f7</color>
+	<color name="colorControlNormal">#FF78909C</color>
+	<color name="colorControlActivated">#FF03A9F4</color>
+	<color name="colorSwitchThumbNormal">#FF78909C</color>
+
+	<color name="colorPrimaryQuarter">#3303A9F4</color>
+	<color name="colorPrimaryHalf">#9003A9F4</color>
+	<color name="colorControlNormalHalf">#9078909C</color>
+	<color name="colorControlActivatedHalf">#9003A9F4</color>
+	<color name="colorAccentQuarter">#3300E5FF</color>
+	<color name="colorAccentHalf">#9000E5FF</color>
+
+	<color name="colorSecondaryLight">#ffe9e9e9</color>
+
+	<array name="progress_colors_light">
+		<item>#FF03A9F4</item>
+		<item>#FFD8433C</item>
+		<item>#FFF2AF3A</item>
+		<item>#FF279B5E</item>
+	</array>
+
+	<array name="progress_colors_dark">
+		<item>#FF00E5FF</item>
+		<item>#ffd81d5a</item>
+		<item>#fff27512</item>
+		<item>#ff63bc34</item>
+	</array>
+
+	<array name="in_colors_light">
+		<item>#4B03A9F4</item>
+		<item>#3303A9F4</item>
+		<item>#1903A9F4</item>
+	</array>
+
+	<array name="in_colors_dark">
+		<item>#4B00E5FF</item>
+		<item>#3300E5FF</item>
+		<item>#1900E5FF</item>
+	</array>
+
+	<color name="tpi_checked">#FFFFFFFF</color>
+	<color name="tpi_unchecked">#99FFFFFF</color>
+
+	<color name="et_divider_focused">@color/colorControlActivated</color>
+	<color name="et_divider_not_focused">#FF6D6D6D</color>
+	<color name="et_divider_disable">#FFC1C1C1</color>
+
+	<color name="tpi_indicatorColor">#f5f5f5</color>
+	<color name="primary_text_default_material_dark">#737373</color>
+	<color name="secondary_text_default_material_dark">#737373</color>
+
+	<!-- floating action button -->
+	<color name="black_semi_transparent">#B2000000</color>
+	<color name="background">#e5e5e5</color>
+	<color name="half_black">#808080</color>
+	<color name="white">#fafafa</color>
+	<color name="white_pressed">#f1f1f1</color>
+	<color name="pink">#e91e63</color>
+	<color name="pink_pressed">#ec407a</color>
+	<color name="blue_semi_transparent">#805677fc</color>
+	<color name="blue_semi_transparent_pressed">#80738ffe</color>
+	<color name="background_msg_right_bck_unread">#e9e9e9</color>
+
+
+</resources>

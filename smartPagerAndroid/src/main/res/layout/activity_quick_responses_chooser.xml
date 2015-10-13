@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/settings_dark_gray_background"
+    android:orientation="vertical"
+    android:paddingBottom="18dp"
+    android:paddingTop="18dp" >
+
+    <!-- ===================================================================== -->
+    <!-- CHOOSE QUICK RESPONSE -->
+
+    <TextView
+        style="@style/CaptionCapitalPagerSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_quick_response"  />
+    
+
+    <include layout="@layout/include_settings_separator_bold" />
+    <!-- ===================================================================== -->
+    <!-- RESPONSES LIST-->
+
+    <ListView
+        android:id="@+id/quick_responses_show_list_view"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:layout_weight="1"
+        android:divider="@color/settings_gray_line"
+        android:dividerHeight="1dp" />
+
+	<!-- ===================================================================== -->
+    <include layout="@layout/include_settings_separator" />
+    <!-- ===================================================================== -->	
+
+</LinearLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_dialog_background"
+    android:minWidth="400dp"
+    android:layout_marginLeft="@dimen/dialog_win_side_margin"
+    android:layout_marginRight="@dimen/dialog_win_side_margin"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/dialog_title_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/dialog_title_padding"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white_text"
+        android:background="@color/panel_gray_background"
+        android:layout_margin="@dimen/dialog_border"
+        android:singleLine="true"
+        android:text="@string/add_a_new_contact" />
+
+    <TextView
+        android:id="@+id/dialog_message_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/dialog_title_padding"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/primary_text_default_material_dark"
+        android:layout_margin="@dimen/dialog_border"
+        android:singleLine="true"
+        android:minWidth="250dp"
+        android:text="@string/please_enter_phone_number" />
+    
+    <net.smartpager.android.view.HiddenEditText
+        android:id="@+id/new_contact_number_editText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="0dp"
+        android:ems="10"
+        android:inputType="numberPassword"        
+        android:maxLength="10"
+        android:minWidth="400dp" />
+
+    <TextView
+        android:id="@+id/new_contact_number_formatted_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="@dimen/dialog_edittext_side_margin"
+        android:layout_marginRight="@dimen/dialog_edittext_side_margin"
+        android:gravity="center"
+        android:textAppearance = "?android:attr/textAppearanceLarge"
+        android:textColor="@color/primary_text_default_material_dark"
+        android:text="(___) ___-____"
+        android:minWidth="400dp" />
+        
+    <com.rey.material.widget.Button
+        app:v_styleId="@array/button_flat"
+        android:id="@+id/contact_accept_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="@dimen/dialog_button_minWidth"
+        android:minHeight="@dimen/dialog_button_minHeight"
+        android:layout_margin="@dimen/dialog_button_margin"
+        android:layout_gravity="center"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/white_text"
+        android:background="@drawable/selector_red_buttom"
+        android:text="@android:string/ok"/>
+
+</LinearLayout>

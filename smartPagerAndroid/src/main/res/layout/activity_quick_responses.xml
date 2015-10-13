@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/settings_dark_gray_background"
+    android:orientation="vertical"
+    android:paddingBottom="18dp"
+    android:paddingTop="18dp" >
+
+    <!-- ===================================================================== -->
+    <!-- ADD NEW QUICK RESPONSE -->
+
+    <TextView
+        style="@style/CaptionCapitalPagerSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_add_new_quick_response" />
+
+    <include layout="@layout/include_settings_separator_bold" />
+   
+    <RelativeLayout style="@style/RelativeLayoutClickableSettings" 
+        android:paddingLeft="@dimen/settings_horizontal_margin"
+        android:paddingRight="@dimen/settings_horizontal_margin"
+        >
+
+        <com.rey.material.widget.EditText
+            android:id="@+id/quick_responses_new_edit_text"
+            style="@style/style_red_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/settings_top_margin"
+            android:layout_toLeftOf="@+id/quick_responses_add_button"
+            android:inputType = "textMultiLine"
+			android:hint="@string/hint_type_new_message_here"            
+            />
+        <com.rey.material.widget.Button
+            app:v_styleId="@array/button_flat"
+		    android:id="@+id/quick_responses_add_button"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:minWidth="61dp"
+		    android:minHeight="26dp"
+		    android:background="@drawable/selector_page_new_item_button"
+		    android:layout_alignParentRight="true"
+		    android:layout_centerVertical="true"
+		    android:textColor="@color/white_text"
+		    android:textAppearance="?android:attr/textAppearanceSmall"
+		    android:text="@string/quick_response_add"
+		    />
+        
+    </RelativeLayout>
+
+    <include layout="@layout/include_settings_separator" />
+
+    <!-- ===================================================================== -->
+    <!-- MY QUICK RESPONSES -->
+
+    <TextView
+        style="@style/CaptionCapitalPagerSettings"
+        android:layout_marginTop="@dimen/settings_caption_capital_margin_top"
+        android:text="@string/settings_my_quick_responses" />
+
+    <include layout="@layout/include_settings_separator_bold" />
+    <!-- ===================================================================== -->
+    <!-- RESPONSES LIST-->
+
+    <ListView
+        android:id="@+id/quick_responses_show_list_view"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_weight="1"
+        android:divider="@color/settings_gray_line"
+        android:dividerHeight="1dp" />
+
+	<!-- ===================================================================== -->
+    <include layout="@layout/include_settings_separator" />
+    <!-- ===================================================================== -->
+	<TextView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:gravity="center"
+	    android:layout_marginTop = "14dp"
+	    android:layout_marginLeft = "24dp"
+	    android:layout_marginRight = "24dp"
+	    android:textColor="@color/item_gray_background"
+	    android:text="@string/quick_response_customize"
+	    />
+
+</LinearLayout>

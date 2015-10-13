@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingBottom="4dp"
+    android:paddingLeft="@dimen/contact_details_data_left_margin"
+    android:paddingTop="4dp"    
+    android:descendantFocusability="blocksDescendants"
+    tools:context=".holders.ChatRedItemHolder" >
+
+    <ImageView
+        android:id="@+id/item_chat_person_image_view"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginRight="@dimen/panel_vertical_margin"
+        android:adjustViewBounds="true"
+        android:background="@drawable/shape_red_photo_rect"
+        android:cropToPadding="true"
+        android:padding="2dp"
+        android:scaleType="centerCrop"
+        android:focusable="false"
+        android:src="@drawable/personal_info_empty_avatar"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/item_chat_message_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/chat_blue_bubble_left"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:id="@+id/item_chat_signature_text_view"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/signature"
+            android:textSize="11sp"
+            />
+
+        <TextView
+            android:id="@+id/item_chat_date_text_view"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            />
+
+        <include
+            android:id="@+id/player"
+            android:focusable="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_chat_signature_text_view"
+            layout="@layout/include_player_chat" />	
+        
+        <include
+            android:id="@+id/item_chat_image_framelayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/player"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            layout="@layout/include_chat_image_framelayout" />
+
+        <TextView
+            android:id="@+id/item_chat_message_caption_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_chat_image_framelayout"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/item_chat_message_body_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_chat_message_caption_text_view"
+            android:textSize="15sp"/>
+
+        <View
+            android:id="@+id/item_chat_line"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_below="@+id/item_chat_message_body_text_view"
+            android:background="#50000000"
+            android:visibility="visible" />
+
+        <com.rey.material.widget.Button
+            app:v_styleId="@array/button_flat"
+            android:id="@+id/item_chat_call_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_chat_line"
+            android:layout_marginTop="4dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/shape_green_call_button"
+            android:minHeight="0dp"
+            android:focusable="false"
+            android:textColor="@color/white_text"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/item_chat_delivered_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/item_chat_call_button"
+            android:textSize="13sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/item_chat_read_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/item_chat_delivered_text_view"
+            android:textSize="13sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/item_chat_accepted_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/item_chat_read_text_view"
+            android:textSize="13sp"
+            android:visibility="visible" />
+        
+        <LinearLayout
+            android:id="@+id/itemchat_list_lin_lay_pdfbutton"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_chat_accepted_text_view" >
+
+            <com.rey.material.widget.Button
+                app:v_styleId="@array/button_flat"
+	            android:id="@+id/itemchat_btn_pdf_attachment"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginRight="8dp"
+	            android:layout_weight="1"
+	            android:minHeight="35dp"
+	            android:minWidth="144dp"
+	            android:focusable="false"
+	            android:text="[pdf button placeholder]" />
+            
+        </LinearLayout>
+        
+	    <LinearLayout
+	        android:id="@+id/itemchat_list_lin_lay_buttons"
+	        android:layout_marginTop="10dp"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/itemchat_list_lin_lay_pdfbutton" >
+
+            <com.rey.material.widget.Button
+                app:v_styleId="@array/button_flat"
+	            android:id="@+id/itemchat_btn_decline"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_marginRight="8dp"
+	            android:layout_weight="1"
+	            android:background="@drawable/selector_red_buttom"
+	            android:minHeight="35dp"
+	            android:minWidth="144dp"
+	            android:focusable="false"
+	            android:text="@string/decline"
+	            android:textColor="@color/white_text" />
+
+            <com.rey.material.widget.Button
+                app:v_styleId="@array/button_flat"
+	            android:id="@+id/itemchat_btn_accept"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="8dp"
+	            android:layout_weight="1"
+	            android:background="@drawable/selector_green_buttom"
+	            android:minHeight="35dp"
+	            android:minWidth="144dp"
+	            android:focusable="false"
+	            android:text="@string/accept"
+	            android:textColor="@color/white_text" />
+	    </LinearLayout>
+	    
+	    <LinearLayout
+	        android:id="@+id/item_chat_quick_resp_options_layout"
+	        android:layout_marginTop="10dp"
+	        android:orientation="vertical"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/itemchat_list_lin_lay_buttons" >
+	        
+	        <TextView
+	            android:id="@+id/item_chat_quick_resp_header"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textSize="18sp"
+	            android:text="@string/select_response"
+	            android:layout_margin="5dp"
+	            android:visibility="visible" />
+	        
+	        <!-- Not needed here. This filling is made
+	        programmatically in ChatInboxItemNolder -->
+	        
+<!-- 	        <TextView
+	            android:id="@+id/item_chat_quick_resp_option_1"
+	            style="@style/ResponseOptionsText"
+	            android:focusable="false"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:text="Response 1" />
+	        
+	        <TextView
+	            android:id="@+id/item_chat_quick_resp_option_2"
+	            style="@style/ResponseOptionsText"
+	            android:focusable="false"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:text="Response 2" />
+	        
+	        <TextView
+	            android:id="@+id/item_chat_quick_resp_option_3"
+	            style="@style/ResponseOptionsText"
+	            android:focusable="false"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:text="Response 3" />
+	        
+	        <TextView
+	            android:id="@+id/item_chat_quick_resp_option_4"
+	            style="@style/ResponseOptionsText"
+	            android:focusable="false"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:text="Response 4" /> -->
+	        
+	    </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item 	android:state_pressed="true">
+        <shape>
+            <stroke android:width="@dimen/contact_border"
+		        	android:color="@color/black_color" />
+		    <solid  android:color="@color/black_color" />
+        </shape>
+    </item>
+    
+	<item >
+        <shape>
+            <stroke android:width="@dimen/contact_border"
+		        	android:color="@color/black_color" />
+		    <solid  android:color="@color/gray_page_button" />
+        </shape>
+    </item>
+</selector>

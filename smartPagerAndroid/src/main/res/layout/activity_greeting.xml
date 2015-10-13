@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/settings_dark_gray_background"
+    android:orientation="vertical"
+    android:paddingBottom="18dp"
+    android:paddingTop="18dp" >
+
+    <!-- ===================================================================== -->
+    <!-- GREETING STATUS -->
+
+    <TextView
+        style="@style/CaptionCapitalPagerSettings"
+        android:text="@string/settings_greeting_status" />
+
+    <include layout="@layout/include_settings_separator_bold" />
+    <!-- CUSTOM GREETING -->
+
+    <RelativeLayout style="@style/RelativeLayoutClickableSettings" >
+
+        <TextView
+            style="@style/CaptionPagerSettings"
+            android:text="@string/settings_custom_greeting" />
+
+        <Switch
+            android:id="@+id/settings_greeting_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/settings_text_pager_margin"
+            android:checked="true"
+            android:switchTextAppearance="@style/SwitchTextAppearance"
+            android:thumb="@drawable/switch_inner_red"
+            android:track="@drawable/switch_track_red" />
+    </RelativeLayout>
+
+    <include layout="@layout/include_settings_separator" />
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <!-- CURRENT GREETING -->
+
+    <RelativeLayout style="@style/RelativeLayoutClickableSettings" >
+
+        <TextView
+            android:id="@+id/settings_current_greeting_text"
+            style="@style/CaptionSettings"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/settings_text_pager_margin"
+            android:text="@string/settings_current_greeting" />
+
+        <TextView
+            android:id="@+id/settings_current_greeting_recorded_date_text_view"
+            style="@style/DescriptionSettings"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/settings_text_pager_margin"
+            android:text="@string/settings_no_custom_greetings" />
+
+        <ImageButton
+            android:id="@+id/settings_current_greeting_play_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/settings_text_pager_margin"
+            android:background="@drawable/selector_greeting_button"
+            android:minHeight="32dp"
+            android:minWidth="64dp"
+            android:src="@drawable/settings_ic_play" />
+    </RelativeLayout>
+
+    <include layout="@layout/include_settings_separator" />
+    <!-- ===================================================================== -->
+    <!-- RECORD NEW GREETING -->
+
+    <TextView
+        style="@style/CaptionCapitalPagerSettings"
+        android:layout_marginTop="@dimen/settings_caption_capital_margin_top"
+        android:text="@string/settings_record_new_greeting" />
+
+    <include layout="@layout/include_settings_separator_bold" />
+
+    <RelativeLayout
+        style="@style/RelativeLayoutClickableSettings"
+        android:paddingBottom="@dimen/settings_horizontal_margin" >
+
+        <SeekBar
+            android:id="@+id/settings_new_greeting_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="@dimen/settings_horizontal_margin"
+            android:progressDrawable="@drawable/layerlist_slider_progress"
+            android:thumb="@null" />
+
+        <TextView
+            android:id="@+id/settings_new_greeting_time_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/settings_text_top_margin_caption"
+            android:layout_toLeftOf="@+id/settings_new_greeting_save_button"
+            android:layout_alignTop="@+id/settings_new_greeting_save_button"
+            android:singleLine="true"
+            android:text="00:00"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/settings_gray_text" />
+
+        <ImageButton
+            android:id="@+id/settings_new_greeting_record_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/settings_new_greeting_seekbar"
+            android:layout_marginLeft="@dimen/settings_text_pager_margin"
+            android:layout_marginTop="@dimen/settings_horizontal_margin"
+            android:background="@drawable/selector_greeting_button"
+            android:minHeight="32dp"
+            android:minWidth="64dp"
+            android:src="@drawable/settings_ic_rec" />
+
+        <ImageButton
+            android:id="@+id/settings_new_greeting_play_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/settings_new_greeting_record_button"
+            android:layout_alignTop="@+id/settings_new_greeting_record_button"
+            android:layout_marginLeft="-1dp"
+            android:layout_toRightOf="@+id/settings_new_greeting_record_button"
+            android:background="@drawable/selector_greeting_button"
+            android:minHeight="32dp"
+            android:minWidth="64dp"
+            android:src="@drawable/settings_ic_play" />
+
+        <com.rey.material.widget.Button
+            app:v_styleId="@array/button_flat"
+            android:id="@+id/settings_new_greeting_save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/settings_new_greeting_record_button"
+            android:layout_marginRight="@dimen/settings_horizontal_margin"
+            android:background="@drawable/selector_page_new_item_button"
+            android:minHeight="26dp"
+            android:minWidth="61dp"
+            android:text="@string/settings_save"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/white_text" />
+    </RelativeLayout>
+
+    <include layout="@layout/include_settings_separator" />
+
+    <!-- ===================================================================== -->
+
+</LinearLayout>

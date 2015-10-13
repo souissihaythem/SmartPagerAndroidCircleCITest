@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/relativelayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:paddingBottom="2dp"
+        android:paddingRight="2dp" >
+
+        <ImageView
+            android:id="@+id/item_imageView"
+            android:layout_width="90dp"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="false"
+            android:adjustViewBounds="true"
+            android:background="@drawable/pic_border"
+            android:cropToPadding="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/def_pic_no_image" />
+
+    </RelativeLayout>
+
+    <com.rey.material.widget.Button
+        app:v_styleId="@array/button_flat"
+        android:id="@+id/item_image_remove_button"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/relativelayout"
+        android:layout_marginRight="-15dp"
+        android:background="@drawable/selector_remove_buttom" />
+
+</RelativeLayout>

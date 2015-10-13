@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"    
+    android:background="@drawable/shape_rounded_chat_player"
+    android:orientation="horizontal"
+    android:padding="5dp" >
+
+    <ImageButton
+        android:id="@+id/player_action_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_round_button"
+        android:minHeight="30dp"
+        android:minWidth="30dp"
+        android:src="@drawable/selector_chat_play_button" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/player_progress_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:text="00:00"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/player_chat_border" />
+
+        <SeekBar
+            android:id="@+id/player_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:progressDrawable="@drawable/layerlist_chat_slider_progress"
+            android:thumb="@null" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.smartpager.android"
+    android:permission="android.permission.RECEIVE_BOOT_COMPLETED"
+    android:versionCode="1072"
+    android:versionName="2.5.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <!--
+    <permission
+        android:name="net.smartpager.android.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="net.smartpager.android.permission.C2D_MESSAGE" />
+
+   App receives GCM messages.
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    GCM requires a Google account. 
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+   Keeps the processor from sleeping when a message is received.
+    -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+
+
+    <uses-feature
+        android:name="android.hardware.BLUETOOTH"
+        android:required="false" />
+
+    <application
+        android:name="net.smartpager.android.SmartPagerApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme"
+        android:supportsRtl="true" >
+
+        <activity android:name="net.hockeyapp.android.UpdateActivity" />
+
+        <!-- =================================================================== -->
+        <!-- PROVIDER -->
+        <provider
+            android:name="net.smartpager.android.SmartPagerContentProvider"
+            android:authorities="net.smartpager.android"
+            android:enabled="true"
+            android:exported="false" >
+        </provider>
+
+
+        <!-- =================================================================== -->
+        <!--
+        RECEIVER 
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="net.smartpager.android" />
+            </intent-filter>
+        </receiver>
+
+        -->
+        <receiver android:name="net.smartpager.android.receivers.TaskTimerReceiver">
+            <intent-filter>
+                <action android:name="net.smartpager.android.UPDATE_TASK_TIMER" >
+                </action>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="net.smartpager.android.Autostart" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="net.smartpager.android.receivers.OutgoingCallReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+                <action android:name="net.smartpager.android.SET_OUTGOING_CALL_NUMBER" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="net.smartpager.android.SmartGCMReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="net.smartpager.android" />
+            </intent-filter>
+        </receiver>
+        <!-- =================================================================== -->
+        <!--
+        SERVICE 
+
+        <service android:name="net.smartpager.android.GCMIntentService" />
+
+        -->
+        
+        <service
+          android:name="com.twilio.client.TwilioClientService"
+          android:exported="false" />
+        
+        <service
+            android:name="net.smartpager.android.service.WebService"
+            android:enabled="true"
+            android:exported="false" >
+        </service>
+        <service
+            android:name="net.smartpager.android.service.PlayerService"
+            android:enabled="true" />
+        <service
+            android:name="net.smartpager.android.service.FileDownloadService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+        <service
+            android:name="net.smartpager.android.service.NotificationService"
+            android:enabled="true" >
+        </service>
+        <service
+            android:name="net.smartpager.android.service.TaskTimerService"
+            android:enabled="true" >
+        </service>
+        <service
+            android:name="net.smartpager.android.service.ArchiveService"
+            android:enabled="true" >
+        </service>
+        <service
+            android:name="net.smartpager.android.service.UnreadAlarmService"
+            android:enabled="true" >
+        </service>
+
+        <!-- =================================================================== -->
+        <!-- ACTIVITY -->
+        <activity
+            android:name="net.smartpager.android.activity.LaunchActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="net.smartpager.android.activity.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name="net.smartpager.android.activity.LicenseActivity"
+            android:label="@string/title_activity_license"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="net.smartpager.android.activity.MobileVerificationActivity"
+            android:label="@string/title_activity_mobile_verification"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible|adjustResize" >
+        </activity>
+        <activity
+            android:name="net.smartpager.android.activity.ManualDevicesCodeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible|adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.smartpager.android.activity.MobileVerificationActivity">
+            </meta-data>
+        </activity>
+        <activity 
+            android:name="net.smartpager.android.activity.SecretQuestionsActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.smartpager.android.activity.MobileVerificationActivity" />
+        </activity>
+        <activity
+            android:name="net.smartpager.android.activity.PersonalInfoActivity"
+            android:label="@string/title_activity_personal_infor"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="net.smartpager.android.activity.PinCodeActivity"
+            android:label="@string/title_activity_pin_code"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible|adjustResize" >
+        </activity>
+        <activity
+            android:name="net.smartpager.android.activity.ChatActivity"
+            android:label="@string/title_activity_chat"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.smartpager.android.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="net.smartpager.android.activity.MuteNotificationsActivity"
+            android:label="@string/title_mute_notifications"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.smartpager.android.activity.ChatActivity" />
+        </activity>
+        <activity
+            android:name="net.smartpager.android.activity.ContactDetailsActivity"
+            android:label="@string/title_activity_contact_details"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="net.smartpager.android.activity.GroupDetailsActivity"
+            android:label="@string/title_activity_group_details"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="net.smartpager.android.activity.NewMessageActivity"
+            android:label="@string/title_activity_new_message"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.smartpager.android.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="net.smartpager.android.activity.RecipientListActivity"
+            android:label="@string/title_activity_recipietn_list"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="net.smartpager.android.activity.ImageGalleryActivity"
+            android:label="@string/title_activity_image_gallery"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="net.smartpager.android.activity.settings.SettingsHostActivity"
+            android:label="@string/title_activity_settings_host"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="net.smartpager.android.activity.info.InfoActivity"
+            android:label="@string/title_activity_info"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.smartpager.android.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="net.smartpager.android.activity.info.EULAActivity"
+            android:label="@string/title_activity_eula"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.smartpager.android.activity.info.InfoActivity" />
+        </activity>
+        <activity
+            android:name="net.smartpager.android.activity.settings.SettingsActivity"
+            android:label="@string/title_activity_settings_host"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.smartpager.android.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="net.smartpager.android.activity.settings.MyProfileActivity"
+            android:label="@string/title_activity_my_profile"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.smartpager.android.activity.settings.SettingsActivity" />
+        </activity>
+        <activity
+            android:name="net.smartpager.android.activity.settings.ArchiveSettingsActivity"
+            android:label="@string/title_activity_archive_settings"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.smartpager.android.activity.settings.SettingsActivity" />
+        </activity>
+        <activity
+            android:name="net.smartpager.android.activity.settings.PinSettingsActivity"
+            android:label="@string/title_activity_pin_settings"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.smartpager.android.activity.settings.SettingsActivity" />
+        </activity>
+        <activity
+            android:name="net.smartpager.android.activity.settings.PersonalVerificationQuestionsActivity"
+            android:label="@string/title_activity_personal_verification_questions"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.smartpager.android.activity.settings.SettingsActivity" />
+        </activity>
+        <activity
+            android:name="net.smartpager.android.activity.settings.QuickResponsesActivity"
+            android:label="@string/title_activity_quick_responses"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.smartpager.android.activity.settings.SettingsActivity" />
+        </activity>
+        <activity
+            android:name="net.smartpager.android.activity.settings.AutoTextResponseActivity"
+            android:label="@string/title_activity_auto_text_response"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.smartpager.android.activity.settings.SettingsActivity" />
+        </activity>
+        <activity
+            android:name="net.smartpager.android.activity.settings.ForwardPagesActivity"
+            android:label="@string/title_activity_forward_pages"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.smartpager.android.activity.settings.SettingsActivity" />
+        </activity>
+        <activity
+            android:name="net.smartpager.android.activity.settings.ChangePinActivity"
+            android:label="@string/title_activity_change_pin"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible|adjustResize" >
+        </activity>
+        <activity
+            android:name="net.smartpager.android.activity.CheckPinActivity"
+            android:label="@string/title_activity_check_pin"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible|adjustResize" >
+        </activity>
+        <activity
+            android:name="net.smartpager.android.activity.settings.GreetingPlayerActivity"
+            android:label="@string/title_activity_greeting"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.smartpager.android.activity.settings.SettingsActivity" />
+        </activity>
+        <activity
+            android:name="net.smartpager.android.activity.NewVoiceMessageActivity"
+            android:label="@string/title_activity_new_voice_message"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityDialog" >
+        </activity>
+        <activity
+            android:name="net.smartpager.android.activity.crop.CropImageActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="net.smartpager.android.activity.QuickResponseChooserActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.smartpager.android.activity.ChatActivity" />
+        </activity>
+        <activity
+            android:name="net.smartpager.android.activity.MessageOptionsActivity"
+            android:label="@string/title_activity_new_voice_message"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityDialog" >
+        </activity>
+        <activity
+            android:name="net.smartpager.android.activity.LocalGroupAddActivity"
+            android:label="@string/title_activity_new_local_group"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="net.smartpager.android.activity.LocalGroupDetailsActivity"
+            android:label="@string/title_activity_group_details"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="net.smartpager.android.activity.LocalGroupEditActivity"
+            android:label="@string/edit_group"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="net.smartpager.android.activity.LockActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="net.smartpager.android.dialer.VoipPhoneScreen"
+            android:label="@string/title_voip_phone_screen_title"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <service
+            android:name="net.smartpager.android.AlarmService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+    </application>
+
+</manifest>

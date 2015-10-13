@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_chat_image_framelayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/item_chat_record_image_view3"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/pic_border"
+        android:cropToPadding="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/def_pic_no_image"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/item_chat_record_image_view2"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="4dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/pic_border"
+        android:cropToPadding="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/def_pic_no_image"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/item_chat_record_image_view1"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/pic_border"
+        android:cropToPadding="true"
+        android:scaleType="centerCrop"
+        android:focusable="false"
+        android:src="@drawable/def_pic_no_image"
+        android:visibility="visible" />
+
+</FrameLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/settings_text_top_margin_single_caption"
+        android:paddingBottom="@dimen/settings_text_top_margin_single_caption">
+
+        <!-- ===================================================================== -->
+        <!-- FIRST QUESTION -->
+        <TextView
+            android:id="@+id/personal_verification_first_title"
+            style="@style/CaptionCapitalPagerSettings"
+            android:text="@string/settings_verification_question" />
+
+        <include layout="@layout/include_settings_separator_bold" />
+
+        <com.rey.material.widget.Spinner
+            app:v_styleId="@array/spinner"
+            android:id="@+id/personal_verification_spinner_question_one"
+            android:layout_marginRight="@dimen/settings_horizontal_margin"
+            android:layout_marginLeft="@dimen/settings_horizontal_margin"
+            style="@style/SpinnerRedSettings" />
+
+        <com.rey.material.widget.EditText
+            android:id="@+id/personal_verification_et_first_answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/settings_horizontal_margin"
+            android:layout_marginLeft="@dimen/settings_horizontal_margin"
+            android:layout_marginTop="5dp"
+            android:inputType="textMultiLine"
+            android:hint="@string/hint_type_your_answer" />
+
+        <!-- ===================================================================== -->
+        <!-- SECOND QUESTION -->
+        <TextView
+            android:id="@+id/personal_verification_second_title"
+            style="@style/CaptionCapitalPagerSettings"
+            android:paddingTop="@dimen/settings_text_top_margin_single_caption"
+            android:text="@string/settings_verification_question" />
+
+        <include layout="@layout/include_settings_separator_bold" />
+
+        <com.rey.material.widget.Spinner
+            app:v_styleId="@array/spinner"
+            android:id="@+id/personal_verification_spinner_question_two"
+            android:layout_marginRight="@dimen/settings_horizontal_margin"
+            android:layout_marginLeft="@dimen/settings_horizontal_margin"
+            style="@style/SpinnerRedSettings" />
+
+        <com.rey.material.widget.EditText
+            android:id="@+id/personal_verification_et_second_answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/settings_horizontal_margin"
+            android:layout_marginLeft="@dimen/settings_horizontal_margin"
+            android:layout_marginTop="5dp"
+            android:inputType="textMultiLine"
+            android:hint="@string/hint_type_your_answer" />
+
+        <!-- ===================================================================== -->
+        <!-- THIRD QUESTION -->
+        <TextView
+            android:id="@+id/personal_verification_third_title"
+            style="@style/CaptionCapitalPagerSettings"
+            android:paddingTop="@dimen/settings_text_top_margin_single_caption"
+            android:text="@string/settings_verification_question" />
+
+        <include layout="@layout/include_settings_separator_bold" />
+
+        <com.rey.material.widget.Spinner
+            app:v_styleId="@array/spinner"
+            android:id="@+id/personal_verification_spinner_question_three"
+            android:layout_marginRight="@dimen/settings_horizontal_margin"
+            android:layout_marginLeft="@dimen/settings_horizontal_margin"
+            style="@style/SpinnerRedSettings" />
+
+        <com.rey.material.widget.EditText
+            android:id="@+id/personal_verification_et_third_answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/settings_horizontal_margin"
+            android:layout_marginLeft="@dimen/settings_horizontal_margin"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="@dimen/settings_top_margin"
+            android:inputType="textMultiLine"
+            android:hint="@string/hint_type_your_answer" />
+
+        <!-- ===================================================================== -->
+        <!-- USEFUL INFO -->
+        <TextView
+            style="@style/CaptionCapitalPagerSettings"
+            android:paddingTop="@dimen/settings_text_top_margin_single_caption"
+            android:layout_marginRight="10dp"
+            android:textSize="17dp"
+            android:text="@string/personal_verification_useful_info" />
+
+        <com.rey.material.widget.Button
+            app:v_styleId="@array/button_flat"
+            android:id="@+id/personal_verification_bt_save"
+            style="@style/style_green_next_button"
+            android:text="@string/save"   />
+
+    </LinearLayout>
+
+</ScrollView>

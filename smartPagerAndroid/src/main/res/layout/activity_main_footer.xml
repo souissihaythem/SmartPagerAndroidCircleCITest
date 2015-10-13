@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"    
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    >
+
+    <!--
+    android:background="@drawable/shape_gradient_panel_background"-->
+
+    <!--<ImageButton
+        android:id="@+id/main_footer_new_message_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/selector_new_message_button" />-->
+
+    <com.rey.material.widget.FloatingActionButton
+        android:id="@+id/main_footer_new_message_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:v_styleId="@array/fab_wave_color"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"/>
+
+   <!-- <ImageButton
+        android:id="@+id/main_footer_status_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/selector_page_status_button_online" />-->
+
+    <TextView
+        android:id="@+id/version_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:singleLine="true" />
+
+    <!--<com.getbase.floatingactionbutton.FloatingActionsMenu-->
+        <!--android:id="@+id/main_footer_status_button"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--fab:fab_addButtonColorNormal="@color/white"-->
+        <!--fab:fab_addButtonColorPressed="@color/white_pressed"-->
+        <!--fab:fab_addButtonPlusIconColor="@color/half_black"-->
+        <!--fab:fab_labelStyle="@style/menu_labels_style"-->
+        <!--fab:fab_labelsPosition="right"-->
+        <!--android:layout_alignParentBottom="true">-->
+
+        <!--<com.getbase.floatingactionbutton.FloatingActionButton-->
+            <!--android:id="@+id/popup_set_offline_layout"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--fab:fab_colorNormal="@color/white"-->
+            <!--fab:fab_title="@string/pager_off"-->
+            <!--fab:fab_icon="@drawable/def_ic_offline"-->
+            <!--fab:fab_colorPressed="@color/white_pressed"/>-->
+
+        <!--<com.getbase.floatingactionbutton.FloatingActionButton-->
+            <!--android:id="@+id/popup_set_online_layout"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--fab:fab_colorNormal="@color/white"-->
+            <!--fab:fab_title="@string/pager_on"-->
+            <!--fab:fab_icon="@drawable/def_ic_online"-->
+            <!--fab:fab_colorPressed="@color/white_pressed"/>-->
+
+    <!--</com.getbase.floatingactionbutton.FloatingActionsMenu>-->
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/main_footer_status_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:paddingRight="10dp"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        fab:menu_labels_ellipsize="end"
+        fab:menu_labels_singleLine="true"
+        fab:menu_labels_position="right"
+        fab:menu_colorNormal="@color/white"
+        fab:menu_colorPressed="@color/white"
+        fab:menu_colorRipple="@color/colorAccent" >
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/popup_set_offline_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/def_ic_offline"
+            fab:fab_label="Pager Off" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/popup_set_online_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/def_ic_online"
+            fab:fab_label="Pager On" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+
+</RelativeLayout>

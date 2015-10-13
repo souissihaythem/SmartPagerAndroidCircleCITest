@@ -1,0 +1,137 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MobileVerificationActivity" >
+
+        <include
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/include_authorization_header"
+            android:background="@color/gray_background" />
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/animationLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray_background"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/animation_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/animation_from_device_to_web" />
+
+                <TextView
+                    android:id="@+id/item_contact_status_textView"
+                    style="@style/style_big_gray_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="bottom|center_horizontal"
+                    android:text="@string/sms_verification"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <TextView
+                    android:id="@+id/item_massage_them_textView"
+                    style="@style/style_big_gray_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="top|center_horizontal"
+                    android:text="@string/it_can_take"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/contentLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray_background"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/pin_description_textView"
+                    style="@style/style_big_gray_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/please_enter_your_mobile_number" />
+
+                <TextView
+                    android:id="@+id/personal_info_textView"
+                    style="@style/style_center_lite_gray_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/after_confirming"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <View
+                    android:id="@+id/recipient_status_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="@dimen/panel_vertical_margin"
+                    android:background="#ffffff" />
+
+                <LinearLayout
+                    style="@style/style_panel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/blue_light_middle_background"
+                        android:gravity="center"
+                        android:minHeight="57dp"
+                        android:orientation="horizontal"
+                        android:padding="8dp" >
+
+                        <TextView
+                            android:id="@+id/phone_number_formatted_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="(___) ___-____"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.rey.material.widget.Button
+                    app:v_styleId="@array/button_flat"
+                    android:id="@+id/phone_number_next_button"
+                    style="@style/style_green_next_button" />
+                <net.smartpager.android.view.HiddenEditText
+                    android:id="@+id/phone_number_editText"
+                    android:layout_width="1dp"
+                    android:layout_height="1dp"
+                    android:ems="10"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberPassword"
+                    android:visibility="gone"
+                    android:maxLength="10" >
+
+                    <requestFocus />
+                </net.smartpager.android.view.HiddenEditText>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+</ScrollView>

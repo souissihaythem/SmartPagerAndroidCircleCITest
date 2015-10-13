@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/linear_layout_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/personal_info_photo_imageView"
+            android:layout_width="@dimen/profile_photo_size"
+            android:layout_height="@dimen/profile_photo_size"
+            android:layout_margin="@dimen/profile_photo_margin"
+            android:scaleType="centerCrop"
+            android:src="@drawable/personal_info_empty_avatar" />
+
+        <com.rey.material.widget.Button
+            app:v_styleId="@array/button_flat"
+            android:id="@+id/personal_info_new_photo_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/profile_photo_margin"
+            android:background="@drawable/selector_gray_big_button"
+            android:text="@string/new_photo"
+            android:textColor="@color/white_text" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/panel_horizontal_margin"
+        android:paddingRight="@dimen/panel_horizontal_margin" >
+
+        <EditText
+            android:id="@+id/personal_info_first_name_editText"
+            style="@style/style_red_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/first_name" >
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/personal_info_last_name_editText"
+            style="@style/style_red_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/personal_info_first_name_editText"
+            android:layout_marginTop="@dimen/panel_horizontal_margin"
+            android:hint="@string/last_name" />
+
+        <EditText
+            android:id="@+id/personal_info_title_editText"
+            style="@style/style_red_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/personal_info_last_name_editText"
+            android:layout_marginTop="@dimen/panel_horizontal_margin"
+            android:maxLength="20"
+            android:hint="@string/title" />
+
+        <TextView
+            android:id="@+id/personal_info_textView"
+            style="@style/style_personal_info_text"
+            android:layout_below="@+id/personal_info_title_editText"
+            android:text="@string/phone" />
+
+        <TextView
+            android:id="@+id/personal_info_phone_textView"
+            style="@style/style_center_white_text"
+            android:layout_alignBaseline="@+id/personal_info_textView"
+            android:layout_toRightOf="@+id/personal_info_textView"
+            android:text="@string/phone" />
+
+        <TextView
+            android:id="@+id/TextView02"
+            style="@style/style_personal_info_text"
+            android:layout_below="@+id/personal_info_textView"
+            android:text="@string/pager" />
+
+        <TextView
+            android:id="@+id/personal_info_pager_textView"
+            style="@style/style_center_white_text"
+            android:layout_alignBaseline="@+id/TextView02"
+            android:layout_toRightOf="@+id/TextView02"
+            android:text="@string/phone" />
+
+        <TextView
+            android:id="@+id/TextView01"
+            style="@style/style_personal_info_text"
+            android:layout_below="@+id/TextView02"
+            android:text="@string/organization" />
+
+        <TextView
+            android:id="@+id/personal_info_organization_textView"
+            style="@style/style_center_white_text"
+            android:layout_alignBaseline="@+id/TextView01"
+            android:layout_toRightOf="@+id/TextView01"
+            android:text="@string/phone" />
+
+        <LinearLayout
+            android:id="@+id/dep_layout"
+            android:layout_below="@+id/TextView01"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/TextView03"
+                style="@style/style_personal_info_text"
+                android:text="@string/departments" />
+
+            <TextView
+                android:id="@+id/personal_info_departments_textView"
+                style="@style/style_center_white_text"
+                android:gravity="top"
+                android:text="@string/phone" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

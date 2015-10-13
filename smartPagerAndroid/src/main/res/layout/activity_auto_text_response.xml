@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/settings_dark_gray_background"
+    android:paddingBottom="18dp"
+    android:paddingTop="18dp"
+    android:orientation="vertical">
+
+    <!-- ===================================================================== -->
+    <!-- ENABLE AUTO RESPONSE -->
+    
+    <TextView
+        style="@style/CaptionCapitalPagerSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_enable" />
+
+    <include layout="@layout/include_settings_separator_bold" />
+    
+    <RelativeLayout style="@style/RelativeLayoutClickableSettings" >
+
+        <TextView
+            style="@style/CaptionPagerSettings"
+            android:text="@string/settings_auto_response" />
+
+        <Switch
+            android:id="@+id/settings_autoresponse_switch"
+            android:switchTextAppearance="@style/SwitchTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/settings_text_pager_margin"
+            android:checked="true"
+            android:thumb="@drawable/switch_inner_red"
+            android:track="@drawable/switch_track_red" 
+            />
+    </RelativeLayout>
+    
+    <!-- ===================================================================== -->
+    <!-- CUSTOM AUTO RESPONSE -->
+
+    <TextView
+        style="@style/CaptionCapitalPagerSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_custom_auto_response" />
+
+    <include layout="@layout/include_settings_separator_bold" />
+   
+    <RelativeLayout style="@style/RelativeLayoutClickableSettings" 
+        android:paddingLeft="@dimen/settings_horizontal_margin"
+        android:paddingRight="25dp"
+        >
+
+        <com.rey.material.widget.EditText
+            android:id="@+id/auto_responses_new_edit_text"
+            style="@style/style_red_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/settings_top_margin"
+            android:layout_toLeftOf="@+id/auto_responses_custom_radiobutton"
+            android:inputType = "textMultiLine"
+			android:hint="@string/hint_type_autoresponse_here"            
+            />
+		<RadioButton
+		    android:id="@+id/auto_responses_custom_radiobutton"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentRight="true"
+		    android:layout_centerVertical="true"
+		    android:textColor="@color/primary_text_default_material_dark"
+		    />
+        
+    </RelativeLayout>
+    
+    <include layout="@layout/include_settings_separator" />
+
+    <!-- ===================================================================== -->
+    <!-- MY QUICK RESPONSES -->
+
+    <TextView
+        style="@style/CaptionCapitalPagerSettings"
+        android:layout_marginTop="@dimen/settings_caption_capital_margin_top"
+        android:text="@string/settings_my_quick_responses" />
+
+    <include layout="@layout/include_settings_separator_bold" />
+    <!-- ===================================================================== -->
+    <!-- RESPONSES LIST-->
+
+    <ListView
+        android:id="@+id/auto_responses_list_view"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_weight="1"
+        android:divider="@color/settings_gray_line"
+        android:dividerHeight="1dp"
+        />
+	<!-- ===================================================================== -->
+    <include layout="@layout/include_settings_separator" />
+    <!-- ===================================================================== -->
+
+</LinearLayout>

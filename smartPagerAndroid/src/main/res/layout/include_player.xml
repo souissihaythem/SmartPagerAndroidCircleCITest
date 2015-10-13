@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout android:id="@+id/relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+	    android:layout_margin="20dp"
+	    android:background="@drawable/shape_rounded_rectangle"
+	    android:minHeight="80dp"
+	    android:minWidth="335dp"
+	    android:padding="10dp" >
+	    
+        <ImageButton
+            android:id="@+id/player_action_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_round_button"
+            android:minHeight="60dp"
+            android:minWidth="60dp"
+            android:src="@drawable/voice_dialog_ic_play" />
+
+        <SeekBar
+            android:id="@+id/player_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/player_progress_text_view"
+            android:layout_toRightOf="@+id/player_action_button"
+            android:progressDrawable="@drawable/layerlist_slider_progress"
+            android:thumb="@null" />
+
+        <TextView
+            android:id="@+id/player_progress_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="00:00"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#909090" />
+    </RelativeLayout>
+
+    <com.rey.material.widget.Button
+        app:v_styleId="@array/button_flat"
+        android:id="@+id/player_button_close"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/selector_remove_buttom" />
+
+</RelativeLayout>

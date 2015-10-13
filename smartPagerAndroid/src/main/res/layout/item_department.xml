@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/department_state_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="false"
+        android:layout_centerVertical="true"
+        android:gravity="right"
+        android:maxWidth="90dp"
+        android:minWidth="90dp"
+        android:singleLine="true"
+        android:text="Text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white_text" />
+
+    <TextView
+        android:id="@+id/department_name_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/department_state_textView"
+        android:layout_alignBottom="@+id/department_state_textView"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/department_state_textView"
+        android:singleLine="true"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white_text" />
+
+</RelativeLayout>

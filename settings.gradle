@@ -1,0 +1,3 @@
+include ':androidffmpeglibrary'
+include ':framework'
+include ':smartPagerAndroid'

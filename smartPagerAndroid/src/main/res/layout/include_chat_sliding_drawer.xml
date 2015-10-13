@@ -1,0 +1,104 @@
+<SlidingDrawer xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:content="@+id/content"
+    android:handle="@+id/handle"
+    android:rotation="180" >
+
+    <!-- ===== HANDLE ===== -->
+
+    <LinearLayout
+        android:id="@+id/handle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:id="@+id/sliding_rotated_container"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:background="@drawable/shape_gradient_sliding_handle"
+            android:maxHeight="33dp"
+            android:rotation="180" >
+
+            <View
+                android:id="@+id/sliding_dark_top_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/sliding_dark_top_line_color" />
+
+            <TextView
+                android:id="@+id/sliding_participants_counter_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/sliding_dark_bottom_line"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="9dp"
+                android:gravity="center_vertical"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/white_text" />
+
+            <ImageButton
+                android:id="@+id/sliding_arrow_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/sliding_dark_bottom_line"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="9dp"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:src="@drawable/chat_ic_slider_down" />
+
+            <View
+                android:id="@+id/sliding_lite_bottom_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/sliding_lite_bottom_line_color" />
+
+            <View
+                android:id="@+id/sliding_dark_bottom_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_above="@id/sliding_lite_bottom_line"
+                android:background="@color/sliding_dark_bottom_line_color" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- ===== CONTENT ===== -->
+
+    <RelativeLayout
+        android:id="@id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/sliding_content_background"
+        android:minHeight="10dp"
+        android:rotation="180" >
+
+       
+        <biz.mobidev.framework.view.ShoutGalleryView
+            android:id="@+id/sliding_page_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:spacing="20dp" />
+       
+<!-- 
+        <net.smartpager.android.utils.PagerContainer
+            android:id="@+id/sliding_page_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null" >
+            <android.support.v4.view.ViewPager
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal" />
+        </net.smartpager.android.utils.PagerContainer>
+--> 
+    </RelativeLayout>
+
+</SlidingDrawer>

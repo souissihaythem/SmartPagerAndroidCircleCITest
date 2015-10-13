@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SmartPager</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+    <string-array name="main_activity_tabs">
+        <item>MESSAGES</item>
+        <item>ARCHIVE</item>
+        <item>CONTACTS</item>
+        <item>DIALER</item>
+    </string-array>
+    <string-array name="settings_activity_tabs">
+        <item>GENERAL SETTINGS</item>
+        <item>PAGER SETTINGS</item>
+    </string-array>
+    <string-array name="settings_alerts">
+        <item>Bells</item>
+        <item>Classic</item>
+        <item>Modern</item>
+        <item>Smart Pager</item>
+    </string-array>
+    <string-array name="quick_resp_defaults">
+        <item>Can you please provide more details?</item>
+        <item>Can you please take this for me?</item>
+        <item>How urgent is this?</item>
+        <item>I am at lunch and I will deal with it when I return.</item>
+        <item>I am currently busy with a patient.</item>
+        <item>I am currently not on call.</item>
+        <item>I am currently out of the office.</item>
+        <item>I am off today.</item>
+        <item>I will be right there.</item>
+        <item>I will call them right away!</item>
+    </string-array>
+    <string-array name="settings_inbound_modes">
+        <item>SmartPage</item>
+        <item>Call Home</item>
+        <item>Call Mobile</item>
+    </string-array>
+    <string-array name="settings_failover_to_page">
+        <item>5 seconds</item>
+        <item>10 seconds</item>
+        <item>15 seconds</item>
+        <item>20 seconds</item>
+        <item>25 seconds</item>
+        <item>30 seconds</item>
+        <item>35 seconds</item>
+        <item>40 seconds</item>
+        <item>45 seconds</item>
+        <item>50 seconds</item>
+        <item>55 seconds</item>
+        <item>60 seconds</item>
+    </string-array>
+
+    <string-array name="personal_verification_questions">
+        <item>What was the first book I ever read?</item>
+        <item>What was the first company I ever worked for?</item>
+        <item>What High School did my mother attend?</item>
+        <item>In which city was my mother born?</item>
+        <item>What is my spouse\'s/partner\'s middle name?</item>
+        <item>In which city did I get married?</item>
+        <item>What is my best friend\'s first name?</item>
+        <item>What is the name of the first school I attended?What is the name of the first school I attended?What is the name of the first school I attended?</item>
+        <item>What was my kindergarten teacher\'s last name?</item>
+        <item>What is the first name of my oldest cousin?</item>
+    </string-array>
+
+    <string name="title_activity_license">Review License (Scroll Down)</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="decline">Decline</string>
+    <string name="agree">Agree</string>
+    <string name="accept">Accept</string>
+    <string name="cancel">Cancel</string>
+    <string name="add_favourite">Add Favourite</string>
+    <string name="remove_favourite">Remove Favourite</string>
+    <string name="title_activity_mobile_verification">Device Registration</string>
+    <string name="mobile_number_verification">Mobile\nNumber\nVerification</string>
+    <string name="personal_infor_additional">Review\nProfile</string>
+    <string name="pin_code_registration">PIN code\nRegistration</string>
+    <string name="please_enter_your_mobile_number">Enter Your Mobile Phone Number</string>
+    <string name="after_confirming">Hit the \'Next\' key  below to proceed</string>
+    <string name="title_activity_personal_infor">Review Your Profile</string>
+    <string name="save_and_continue">Save and Continue</string>
+    <string name="title_activity_pin_code">Enter Pin Code</string>
+    <string name="you_will_need_to_enter_this_code">You will need to enter this code occasionally before you can use SmartPager.</string>
+    <string name="please_enter_the_pin_a_second_time_to_confirm">Please enter the PIN a second time to confirm</string>
+    <string name="please_enter_digit">Please enter 4 digit PIN</string>
+    <string name="please_enter_your_contact_information">Please review your profile information</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="title">Title</string>
+    <string name="phone">Phone:</string>
+    <string name="pager">Pager:</string>
+    <string name="close">Close</string>
+    <string name="are_you_sure_you_want_to_cancel_this_message">Are you sure you want to cancel this message?</string>
+    <string name="are_you_sure_you_want_to_clear_archive">Are you sure you want to clear Archive?</string>
+    <string name="organization">Organization:</string>
+    <string name="departments">Departments:</string>
+    <string name="new_photo">New Photo</string>
+    <string name="sms_verification">SMS Verification</string>
+    <string name="it_can_take">It can take from 5 to 50 sec.</string>
+    <string name="page">Page</string>
+    <string name="call">Call</string>
+    <string name="mins_ago">mins ago</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_info">Info</string>
+    <string name="action_clear">Clear Archive</string>
+    <string name="action_search">Search</string>
+    <string name="action_add_contact">Add Contact</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="title_activity_chat">Chat</string>
+    <string name="title_mute_notifications">Mute Notifications</string>
+    <string name="title_activity_contact_details">Contact Details</string>
+    <string name="chat">Chat</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="smartpager_id">SmartPager ID</string>
+    <string name="delete">Delete</string>
+    <string name="title_activity_group_details">Group Details</string>
+    <string name="please_select_either_jpg_or_png_file">Please select either jpg or png file</string>
+    <string name="no_such_file_or_directory">No Such File or Directory</string>
+    <string name="save_data">Save data</string>
+    <string name="page_to_group">Page to group</string>
+    <string name="group_type">Group type</string>
+    <string name="members">Members</string>
+    <string name="not_mobile_connection_to_make_a_call">You do not currently have a mobile connection to make a call</string>
+    <string name="failed_to_call_contact">Failed to call contact</string>
+    <string name="title_activity_new_message">New Message</string>
+    <string name="record">Record</string>
+    <string name="attach">Attach</string>
+    <string name="hint_type_new_message">Type new message</string>
+    <string name="hint_to">To:</string>
+    <string name="hint_subject">Subject:</string>
+    <string name="call_back_number_required">Callback Number&#42;:</string>
+    <string name="required">&#42;:</string>
+    <string name="call_back_number_not_required">Callback Number:</string>
+    <string name="hint_type_answer">Click here to type your answer</string>
+    <string name="message_was_sent">Message was sent</string>
+    <string name="title_activity_recipietn_list">Add Contact</string>
+    <string name="title_activity_image_gallery">View Images</string>
+    <string name="title_activity_settings_host">Settings</string>
+    <string name="settings_my_profile">My Profile</string>
+    <string name="settings_archive_settings">Archive Settings</string>
+    <string name="settings_pin_settings">Pin Settings</string>
+    <string name="settings_quick_responses">Quick Responses</string>
+    <string name="settings_auto_text_response">Auto Reply</string>
+    <string name="settings_forward_pages">Forward Pages</string>
+    <string name="title_activity_my_profile">My Profile</string>
+    <string name="title_activity_archive_settings">Archive Settings</string>
+    <string name="title_activity_pin_settings">Pin Settings</string>
+    <string name="title_activity_quick_responses">Quick Responses</string>
+    <string name="title_activity_auto_text_response">Auto Reply</string>
+    <string name="title_activity_forward_pages">Forward Pages</string>
+    <string name="title_activity_change_pin">Change Pin</string>
+    <string name="title_activity_check_pin">Check Pin</string>
+    <string name="title_activity_personal_verification_questions">Personal Verification Questions</string>
+    <string name="change_pin_enter_current">Enter Your Current PIN</string>
+    <string name="change_pin_enter_new">Enter New PIN</string>
+    <string name="change_pin_enter_second">Enter PIN a second time to confirm</string>
+    <string name="change_pin_incorrect">PIN Incorrect</string>
+    <string name="change_pin_tries">\u0020more tries</string>
+    <string name="change_pin_success">Your PIN has been successfully changed</string>
+    <string name="change_pin_your_pin">Your PIN</string>
+    <string name="change_pin_has_been_successfully_changed">Has been successfully changed</string>
+    <string name="check_pin_incorrect_title">Wrong PIN Entered</string>
+    <string name="check_pin_incorrect_msg">You entered a wrong PIN. Please, try again.</string>
+    <string name="settings_alerts">ALERTS</string>
+    <string name="settings_critical_alert">Critical Alert</string>
+    <string name="settings_on">On</string>
+    <string name="settings_off">Off</string>
+    <string name="settings_ask">Ask</string>
+    <string name="settings_normal_alert">Normal Alert</string>
+    <string name="settings_casual_alert">Chat Alert</string>
+    <string name="settings_vibration">Vibration</string>
+    <string name="settings_voip">VOIP</string>
+    <string name="settings_voip_disabled">VOIP - Disabled on Server</string>
+    <string name="settings_pager_greetings">PAGER GREETINGS</string>
+    <string name="settings_inbound_call_mode">INBOUND CALL MODE</string>
+    <string name="settings_inbound_mode">Inbound Mode</string>
+    <string name="settings_inbound_mode_failover_to_page">Failover to Page</string>
+    <string name="settings_pager_on">Pager On</string>
+    <string name="settings_pager_off">Pager Off</string>
+    <string name="settings_30_minutes">30 minutes</string>
+    <string name="settings_1_hour">1 hour</string>
+    <string name="settings_8_hours">8 hours</string>
+    <string name="settings_always">Always</string>
+    <string name="settings_every">Every</string>
+    <string name="settings_change_pin">Change Pin</string>
+    <string name="settings_after">After</string>
+    <string name="setings_respond">Respond</string>
+    <string name="settings__1_hour">1 Hour</string>
+    <string name="settings_1_day">1 Day</string>
+    <string name="settings_1_week">1 Week</string>
+    <string name="settings_1_month">1 Month</string>
+    <string name="settings_1_year">1 Year</string>
+    <string name="settings_block_my_number">BLOCK MY NUMBER</string>
+    <string name="settings_block_my_number_set_on_server">BLOCK MY NUMBER - VALUE SET ON SERVER</string>
+    <string name="settings_log_my_calls">LOG MY CALLS</string>
+    <string name="settings_record_my_calls">RECORD MY CALLS</string>
+    <string name="settings_required_pin_to_be_entered">REQUIRED PIN TO BE ENTERED</string>
+    <string name="settings_archive_messages">ARCHIVE MESSAGES</string>
+    <string name="settings_remove_from_archive">REMOVE FROM ARCHIVE</string>
+    <string name="settings_add_new_quick_response">ADD NEW QUICK RESPONSE</string>
+    <string name="settings_custom_auto_response">CUSTOM AUTO RESPONSE</string>
+    <string name="settings_my_quick_responses">MY QUICK RESPONSES</string>
+    <string name="settings_no_custom_response">No custom response</string>
+    <string name="settings_enable">ENABLE</string>
+    <string name="settings_auto_response">Auto Response</string>
+    <string name="hint_type_new_message_here">Type new message here</string>
+    <string name="quick_response_add">Add</string>
+    <string name="quick_response_customize">Customize this list to send common responses quickly</string>
+    <string name="quick_response_text_empty">Message text should not be empty</string>
+    <string name="quick_response_i_m_busy">I\'m busy at the moment, but I will get back with you as soon as I am able</string>
+    <string name="quick_response_i_have_received">I have received your message, and I can do that today</string>
+    <string name="quick_response_fusce_tempus">Fusce tempus tellus a sapien ornare sed iaculis ipsum tristique.</string>
+    <string name="quick_response_call_me">Call me on my cell</string>
+    <string name="hint_type_autoresponse_here">Type autoresponse here</string>
+    <string name="title_activity_greeting">Greeting</string>
+    <string name="settings_greeting_status">GREETING STATUS</string>
+    <string name="settings_custom_greeting">Custom Greeting</string>
+    <string name="settings_current_greeting">Current Greeting</string>
+    <string name="settings_record_new_greeting">RECORD NEW GREETING</string>
+    <string name="settings_save">Save</string>
+    <string name="settings_no_custom_greetings">No custom greeting</string>
+    <string name="title_activity_new_voice_message"></string>
+    <string name="type_record_when_ready">Type \"Record\" when ready</string>
+    <string name="recording_">Recording...</string>
+    <string name="popup_select_image">Select Image</string>
+    <string name="popup_take_photo">Take Photo</string>
+    <string name="popup_record_audio">Record Audio</string>
+    <string name="security">Security</string>
+    <string name="do_you_want_to_block_your_id">Do you want to block your ID</string>
+    <string name="pager_off">Pager Off</string>
+    <string name="pager_on">Pager On</string>
+    <string name="signature">Signature</string>
+    <string name="timer_zero_value">00:00</string>
+    <string name="couldn_t_play_file">Couldn\'t play file</string>
+    <string name="sending_message">Sending message</string>
+    <string name="chat_item_pendings">Pending: </string>
+    <string name="contacts_groups">Groups</string>
+    <string name="enter_code_title">Please enter the 5 digit code that was just sent to (%1$s)%2$s-%3$s in a text message.</string>
+    <string name="back">Back</string>
+    <string name="compose">Compose</string>
+    <string name="settings_contact_resynch">CONTACTS RESYNC</string>
+    <string name="resynch">Resync</string>
+    <string name="synching_contacts">Synching contacts...</string>
+    <string name="synchronizing">Synchronizing…</string>
+    <string name="resynch_contacts_finished">Contacts resynch finished</string>
+    <string name="error_resynch_contacts">An error occurred during contacts resynch.</string>
+    <string name="web_action_cancelled">Request cancelled: %1$s</string>
+    <string name="resynch_cancelled">Contact resynch cancelled.</string>
+    <string name="block_my_number_alert">The Block My Number feature is no longer enabled due to an account change. Continue?</string>
+    <string name="block_my_number_error">Sorry, Block My Number feature can\'t be enabled.</string>
+    <string name="block_my_number_turned_off">Block My Number was reset to \'Off\'</string>
+    <string name="attention">Attention</string>
+    <string name="personal_verification_questions_alert">Go to Settings | Personal Verification Questions to complete your setup.</string>
+    <string name="settings_verification_question">QUESTION %1$s</string>
+    <string name="hint_type_your_answer">Click here to type your answer</string>
+    <string name="loading_questions">Loading questions...</string>
+    <string name="questions_not_available">There are no available questions</string>
+    <string name="personal_verification_useful_info">&#160;Setting up your Personal Verification Questions will allow you to more easily reset a forgotten PIN and with completing a reinstall of this app.\n\n
+     &#160;Select your Personal verification questions and enter your answers.\n\n
+     &#160;When yoy are done, tap \"Save\".\n\n
+     &#160;- Always keep this information strictly confidential.\n
+     &#160;- Select questions with answers that you can easily remember.\n
+     &#160;- Never write down or share this information with anyone.\n
+    </string>
+    <string name="personal_verification_error_save">Check to make sure all 3 questions are set and then Save.</string>
+    <string name="personal_verification_error_saving_questions">Sorry, the questions weren\'t saved properly.</string>
+    <string name="personal_verification_success_saving_questions">The questions were saved properly.</string>
+    <string name="personal_verification_reminder_message">Go to Settings | Personal Verification Questions to complete your setup.</string>
+    <string name="saving_questions">Saving questions...</string>
+    <string name="notification_connecting">Connecting, please wait...</string>
+    <string name="unlock_question_notif">You can answer on the secret question to unlock your mobile number:</string>
+    <string name="btn_unlock_question">Unlock</string>
+    <string name="unlock_dialog_title">Unlock question</string>
+    <string name="error_empty_answer">The answer can\'t be empty.</string>
+    <string name="unlock_verifying">Verifying the answer...</string>
+    <string name="unlock_successful">Unlocked successfully.</string>
+    <string name="error_continue">Can\'t continue</string>
+    <string name="error_message_verification_answer">Enter verification answer.</string>
+    <string name="error_message_empty_sms_code">Enter 5 numbers from SMS.</string>
+
+    <!-- Alex Bogomol add's -->
+    <string name="new_group">New Group</string>
+    <string name="new_contact">New Contact</string>
+    <string name="add_a_new_contact">Add a New Contact</string>
+    <string name="add_now">Add Now</string>
+    <string name="contact_already_exists">Your contact list already contains contact with phone number:</string>
+    <string name="warning">Warning</string>
+    <string name="please_enter_phone_number">Please, enter phone number</string>
+    <string name="dialog_title_request">Request</string>
+    <string name="dialog_msg_has_been_sent">Has been sent to</string>
+    <string name="dialog_btn_add_another">Add Another</string>
+    <string name="dialog_btn_done">Done</string>
+    <string name="dialog_title_no_number_in_database">No number in database</string>
+    <string name="dialog_msg_you_can_send_invite">This number is not registered in SmartPager.\n\nWould you like to invite them?</string>
+    <string name="dialog_btn_cancel">Cancel</string>
+    <string name="dialog_btn_send_invite">Send Invite</string>
+    <string name="dialog_btn_confirm">Confirm</string>
+    <string name="dialog_btn_ok">Ok</string>
+    <string name="dialog_msg_has_invited_you">Has invited you to his contact list</string>
+    <string name="dialog_msg_has_accepted_contact">Has accepted your contact request</string>
+    <string name="no_internet_connection">No Internet Connection. Please, check your connection settings.</string>
+    <string name="unable_to_change_status">Unable to change status as there is an issue connecting to the network</string>
+    <string name="recipient_list_should_not_be_empty">The recipient list should not be empty</string>
+    <string name="i_just_started_using_smartpager">I just started using SmartPager, and would like to add you as a contact.  Go to Get.smartpager.net to get the App for your iPhone or Android device</string>
+    <string name="save">Save</string>
+    <string name="discard">Discard</string>
+    <string name="add_user">Add User</string>
+    <string name="settings_urgent_alert">Urgent Alert</string>
+    <string name="sms_is_slow_or_gets_blocked">Note that SMS messages may be delayed.</string>
+    <string name="settings_volume">Volume</string>
+    <string name="quick">Quick</string>
+    <string name="options">Options</string>
+    <string name="choose_quick_response">CHOOSE QUICK RESPONSE</string>
+    <string name="title_activity_message_options">Options</string>
+    <string name="urgent">Urgent</string>
+    <string name="acknowlegement">Acknowlegement</string>
+    <string name="quick_responce_relativelayout_view_android_layout_width_">Quick Response />\n    &lt;/RelativeLayout>\n    \n    &lt;View \t\n \t    android:layout_width=</string>
+    <string name="quick_responce">Quick Response</string>
+    <string name="forward">Forward</string>
+    <string name="dialog_arch_message_title">Archive Message</string>
+    <string name="dialog_read_message_title">Mark Message as Read</string>
+    <string name="dialog_arch_message_msg">Do you want to archive this message?</string>
+    <string name="dialog_read_message_msg">Do you want to mark this message as read?</string>
+    <string name="dialog_read_and_arch_message_msg">Do you want to mark this message as read and move it to the archive?</string>
+    <string name="dialog_delete_message_title">Delete Message</string>
+    <string name="dialog_delete_message_msg">Do you want to delete this message from your archive?</string>
+    <string name="wrote_on_">"wrote on "</string>
+    <string name="none_provided">None Provided</string>
+    <string name="title_activity_new_local_group">Add Local Group</string>
+    <string name="create_local_group">Create local group</string>
+    <string name="group_name">New Group Name</string>
+    <string name="add_member">Add member</string>
+    <string name="this_local_group_will_be_removed">This local group will be removed. Continue?</string>
+    <string name="remove_local_group">Remove Local Group</string>
+    <string name="remove_contact">Remove Contact</string>
+    <string name="this_contact_will_be_removed">This contact will be removed. Continue?</string>
+    <string name="group_name_and_contacts_list_shouldn_t_be_empty">Group Name and Contacts List shouldn\'t be empty</string>
+    <string name="group_the_same_name">There is a group with the same name already in your contacs. Please, use another name.</string>
+    <string name="error_creating_local_group">An error occurred during creating local group</string>
+    <string name="recorded_on_">"Recorded on "</string>
+    <string name="forward_pages">FORWARD PAGES</string>
+    <string name="forward_to_">"Forward to "</string>
+    <string name="messages">Messages</string>
+    <string name="me">Me</string>
+    <string name="add_user_s_">Add User(s)</string>
+    <string name="speaker_off">Speaker Off</string>
+    <string name="speaker_on">Speaker On</string>
+    <string name="actions_archive_all">Archive All</string>
+    <string name="move_read_and_sent">Are you sure you want to move all Read and Sent Messages to the Archive?</string>
+    <string name="dialog_title_delete_quick_resp">Delete Quick Response</string>
+    <string name="dialog_msg_delete_quick_resp">Do really you want to delete this Quick Response?</string>
+    <string name="dialog_title_edit_quick_resp">Edit Quick Response</string>
+    <string name="new_inbox">New Inbox</string>
+    <string name="number_has_been_locked">Your mobile number has been locked.</string>
+    <string name="please_contact_admin">Please contact your administrator or support@smartpager.net</string>
+    <string name="number_has_been_unlocked">Your mobile number has been UNLOCKED</string>
+    <string name="no_greeting_recorded">No greeting recorded</string>
+    <string name="send_logcat">Send Logcat</string>
+    <string name="this_is_not_a_valid_phone_number">This is not a valid phone number</string>
+    <string name="dialog_title_no_internet">No Internet Connection</string>
+    <string name="connection_is_required">A data connection is required to change this setting.</string>
+    <string name="edit">Edit</string>
+    <string name="edit_group">Edit group</string>
+    <string name="save_changes">Save changes</string>
+    <string name="forward_message">Forward Message</string>
+    <string name="do_you_want_to_forward_this_message_">Do you want to forward this message?</string>
+    <string name="select_response">Select Response</string>
+    <string name="clear_archive">Clear archive</string>
+    <string name="archive_all">Archive all</string>
+    <string name="blocking_prefix">Blocking Prefix</string>
+    <string name="notif_new_smartpager_msg">New SmartPager Message</string>
+    <string name="data_network_timed_out">Data network timed out. Please try again later. If the problem persists please try resetting your device or contact your mobile provider.</string>
+    <string name="get_profile">Get Profile</string>
+    <string name="error_registration">Error occurred while registering your phone. Please, try again.</string>
+    <string name="group_name_is_empty">Group Name and Contacts List shouldn\'t be empty</string>
+    <string name="error_creating_group">An error occurred during creating local group</string>
+    <string name="your_pager_number_is_invalid">Your pager number is invalid</string>
+    <string name="sending_request">Sending request</string>
+    <string name="we_are_unable_to_block">We are unable to block your CallerID because there is an issue with the data connection. Do you want to proceed with the call?</string>
+    <string name="error">Error</string>
+    <string name="saving">Saving</string>
+    <string name="processing">Processing</string>
+    <string name="next">Next</string>
+    <string name="done">Done</string>
+    
+    <!-- VOIP -->
+    <string name="title_voip_phone_screen_title">VOIP</string>
+    
+    <!-- Info -->
+    <string name="title_activity_info">Info</string>
+    <string name="title_activity_eula">EULA</string>
+    <string name="smartpager_systems_inc">SmartPager Systems Inc</string>
+    <string name="button_view_eula">View EULA</string>
+    <string name="button_email_support">Email Support</string>
+    <string name="button_call_support">Request Callback</string>
+
+    <!-- Chat activity -->
+    <string name="this_thread_is_silenced_until">This thread is silenced until&#160;</string>
+    <string name="at">&#160;at&#160;</string>
+
+    <!-- message error -->
+    <string name="not_connected_to_internet">Please connect to the internet first</string>
+    <string name="loading_mesages_types">Loading Messages types...</string>
+    <string name="select_message_type">Select Message Type</string>
+    <string name="settings_prefer_cellular">Prefer Cellular Data</string>
+
+</resources>

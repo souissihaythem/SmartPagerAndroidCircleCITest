@@ -1,0 +1,30 @@
+<resources>
+
+    <!--
+        Base application theme for API 11+. This theme completely replaces
+        AppBaseTheme from res/values/styles.xml on API 11+ devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+        <!-- API 11 theme customizations can go here. -->
+        
+    </style>
+    
+    <style name="style_red_edit_text" parent="android:Widget.Holo.Light.EditText">
+        <item name="android:background">@drawable/edit_text_red</item>
+        <item name="android:textColor">@color/black_color</item>
+        <item name="android:textColorHint">@color/item_gray_background</item>
+        <item name="android:ems">10</item>
+        <item name="android:inputType">textPersonName</item>
+        <item name="android:textCursorDrawable">@drawable/cursor_drawable</item>
+    </style>
+
+    <style name="style_page_edit_text" parent="android:Widget.Holo.Light.EditText">
+        <item name="android:background">@drawable/edit_text_holo_light</item>
+        <item name="android:textColor">@color/black_color</item>
+        <item name="android:textColorHint">@color/item_gray_background</item>
+        <item name="android:ems">10</item>
+        <item name="android:inputType">textPersonName</item>
+        <item name="android:textCursorDrawable">@drawable/cursor_drawable</item>
+    </style>
+
+</resources>

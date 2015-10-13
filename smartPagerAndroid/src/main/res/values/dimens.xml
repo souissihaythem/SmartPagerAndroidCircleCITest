@@ -1,0 +1,82 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+	<dimen name="header_authorization_margin">4dp</dimen>
+	<dimen name="panel_horizontal_margin">12dp</dimen>
+	<dimen name="panel_vertical_margin">4dp</dimen>
+	
+	<dimen name = "item_contact_height">96dp</dimen>
+	<dimen name = "contact_status_height">11dp</dimen>
+	<dimen name = "contact_status_margin_bottom">9dp</dimen>
+	<dimen name = "contact_photo_max_height">80dp</dimen>
+	<dimen name = "contact_photo_max_width">80dp</dimen>
+	<dimen name = "contact_photo_height">60dp</dimen>
+	<dimen name = "contact_photo_width">60dp</dimen>
+	<dimen name = "contact_photo_margin">16dp</dimen>
+	<dimen name = "contact_button_height">26dp</dimen>
+	<dimen name = "contact_button_width">100dp</dimen>
+	<dimen name = "contact_button_margin_between">4dp</dimen>
+	<dimen name = "contact_border">1dp</dimen>
+	
+	<dimen name = "pin_symbols_margin">10dp</dimen>
+	<dimen name = "pin_symbols_margin_5">5dp</dimen>
+	
+	<dimen name = "contact_details_button_width">108dp</dimen>
+	<dimen name = "contact_details_button_height">32dp</dimen>
+	<dimen name = "contact_details_button_top_margin">24dp</dimen>
+	<dimen name = "contact_details_button_bottom_margin">24dp</dimen>
+	<dimen name = "contact_details_button_side_margin">12dp</dimen>
+	<dimen name = "contact_details_button_between_margin">6dp</dimen>
+	<dimen name = "contact_details_footer_line_margin">24dp</dimen>
+	
+	<dimen name = "contact_details_name_top_margin">13dp</dimen>
+	<dimen name = "contact_details_name_between_margin">12dp</dimen>
+	<dimen name = "contact_details_name_bottom_margin">12dp</dimen>
+	<dimen name = "contact_details_data_top_margin">9dp</dimen>
+	<dimen name = "contact_details_data_between_margin">11dp</dimen>
+	<dimen name = "contact_details_data_bottom_margin">14dp</dimen>
+	<dimen name = "contact_details_data_left_margin">8dp</dimen>
+	<dimen name = "contact_details_departments_between_margin">5dp</dimen>
+	
+	<dimen name = "group_details_button_height">48dp</dimen>
+	
+	<dimen name = "page_button_size">70dp</dimen>
+	<dimen name = "page_button_padding">5dp</dimen>
+	<dimen name = "page_side_padding">9dp</dimen>
+	<dimen name = "page_button_between_margin">16dp</dimen>
+	<dimen name = "page_top_margin">26dp</dimen>
+	
+	<dimen name="settings_horizontal_margin">16dp</dimen>
+    <dimen name="settings_top_margin">22dp</dimen>
+    <dimen name="settings_min_item_height">64dp</dimen>
+    <dimen name="settings_image_size">32dp</dimen>
+    <dimen name="settings_text_top_margin_single_caption">21dp</dimen>
+    <dimen name="settings_text_top_margin_caption">12dp</dimen>
+    <dimen name="settings_text_top_margin_description">37dp</dimen>
+    <dimen name="settings_text_pager_margin">25dp</dimen>
+    <dimen name="settings_caption_capital_margin_top">32dp</dimen>
+    
+    <dimen name = "profile_photo_size">120dp</dimen>
+    <dimen name = "profile_photo_margin">20dp</dimen>
+    <dimen name = "profile_text_margin">16dp</dimen>
+
+    <dimen name = "dialog_win_side_margin">30dp</dimen>
+    <dimen name = "dialog_border">2dp</dimen>
+    <dimen name = "dialog_title_padding">5dp</dimen>
+    <dimen name = "dialog_message_margin">15dp</dimen>
+    <dimen name = "dialog_button_margin">15dp</dimen>
+    <dimen name = "dialog_button_margin_center">8dp</dimen>
+    <dimen name = "dialog_button_minWidth">130dp</dimen>
+    <dimen name = "dialog_button_minHeight">35dp</dimen>
+    <dimen name = "dialog_edittext_side_margin">20dp</dimen>
+
+	<!-- materail design style -->
+	<dimen name="drawer_width">240dp</dimen>
+	<dimen name="drawer_text">20sp</dimen>
+	<dimen name="title_text">16sp</dimen>
+
+	<dimen name="bt_height">36dp</dimen>
+
+</resources>

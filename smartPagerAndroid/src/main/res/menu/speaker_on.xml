@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/speaker_on"
+        android:icon="@drawable/device_access_volume_muted"
+        android:orderInCategory="100"
+        android:showAsAction="always|withText"
+        android:title="@string/speaker_on"/>
+
+</menu>

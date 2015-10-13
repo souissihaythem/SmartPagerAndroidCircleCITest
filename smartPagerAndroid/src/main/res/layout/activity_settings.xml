@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="18dp"
+        android:paddingTop="18dp" >
+
+        <!-- ===================================================================== -->
+        <!-- ALERTS -->
+
+        <TextView
+            style="@style/CaptionCapitalPagerSettings"
+            android:text="@string/settings_alerts" />
+
+        <include layout="@layout/include_settings_separator_bold" />
+        <!-- CRITICAL ALERT -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp">
+
+            <TextView
+                style="@style/CaptionPagerSettings"
+                android:layout_marginRight="10dp"
+                android:text="@string/settings_urgent_alert" />
+
+            <com.rey.material.widget.Spinner
+                app:v_styleId="@array/spinner"
+                android:id="@+id/settings_critical_alert_spinner"
+                style="@style/SpinnerRedSettings" />
+
+        </LinearLayout>
+
+        <include layout="@layout/include_settings_separator" />
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <!-- NORMAL ALERT -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp">
+
+            <TextView
+                style="@style/CaptionPagerSettings"
+                android:layout_marginRight="10dp"
+                android:text="@string/settings_normal_alert" />
+
+            <com.rey.material.widget.Spinner
+                app:v_styleId="@array/spinner"
+                android:id="@+id/settings_normal_alert_spinner"
+                style="@style/SpinnerRedSettings" />
+
+        </LinearLayout>
+
+        <include layout="@layout/include_settings_separator" />
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <!-- CHAT ALERT -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp">
+
+            <TextView
+                style="@style/CaptionPagerSettings"
+                android:layout_marginRight="10dp"
+                android:text="@string/settings_casual_alert" />
+
+            <com.rey.material.widget.Spinner
+                app:v_styleId="@array/spinner"
+                android:id="@+id/settings_casual_alert_spinner"
+                style="@style/SpinnerRedSettings" />
+
+        </LinearLayout>
+
+        <include layout="@layout/include_settings_separator" />
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <!-- VOLUME -->
+
+        <RelativeLayout style="@style/RelativeLayoutClickableSettings" >
+
+            <TextView
+                android:id="@+id/settings_volume_textview"
+                style="@style/CaptionPagerSettings"
+                android:text="@string/settings_volume" />
+
+            <SeekBar
+                android:id="@+id/settings_volume_seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/settings_volume_textview"
+                android:progressDrawable="@drawable/layerlist_slider_progress"
+                />
+        </RelativeLayout>
+
+        <include layout="@layout/include_settings_separator" />
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <!-- VIBRATION -->
+
+        <RelativeLayout style="@style/RelativeLayoutClickableSettings" >
+
+            <TextView
+                style="@style/CaptionPagerSettings"
+                android:text="@string/settings_vibration" />
+
+            <Switch
+                android:id="@+id/settings_vibration_switch"
+                android:switchTextAppearance="@style/SwitchTextAppearance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/settings_text_pager_margin"
+                android:checked="true"
+                android:thumb="@drawable/switch_inner_red"
+                android:track="@drawable/switch_track_red" 
+                />
+        </RelativeLayout>
+
+        <include layout="@layout/include_settings_separator" />
+        <!-- PAGER GREETINGS -->
+
+        <TextView
+            style="@style/CaptionCapitalPagerSettings"
+            android:layout_marginTop="@dimen/settings_caption_capital_margin_top"
+            android:text="@string/settings_pager_greetings" />
+
+        <include layout="@layout/include_settings_separator_bold" />
+        <!-- PAGER ON -->
+
+        <RelativeLayout
+            android:id="@+id/settings_pager_on_layout"
+            style="@style/RelativeLayoutClickableSettings" >
+
+            <ImageView
+                android:id="@+id/settings_pager_on_image"
+                style="@style/IconImageSettings"
+                android:src="@drawable/settings_ic_online" />
+
+            <TextView
+                android:id="@+id/settings_pager_on_text"
+                style="@style/CaptionSettings"
+                android:layout_toRightOf="@id/settings_pager_on_image"
+                android:text="@string/settings_pager_on" />
+
+            <TextView
+                android:id="@+id/settings_pager_on_description"
+                style="@style/DescriptionSettings"
+                android:layout_toRightOf="@id/settings_pager_on_image"
+                android:text="@string/settings_no_custom_greetings" />
+        </RelativeLayout>
+
+        <include layout="@layout/include_settings_separator" />
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <!-- PAGER OFF -->
+
+        <RelativeLayout
+            android:id="@+id/settings_pager_off_layout"
+            style="@style/RelativeLayoutClickableSettings" >
+
+            <ImageView
+                android:id="@+id/settings_pager_off_image"
+                style="@style/IconImageSettings"
+                android:src="@drawable/settings_ic_offline" />
+
+            <TextView
+                android:id="@+id/settings_pager_off_text"
+                style="@style/CaptionSettings"
+                android:layout_toRightOf="@id/settings_pager_off_image"
+                android:text="@string/settings_pager_off" />
+
+            <TextView
+                android:id="@+id/settings_pager_off_description"
+                style="@style/DescriptionSettings"
+                android:layout_toRightOf="@id/settings_pager_off_image"
+                android:text="@string/settings_no_custom_greetings" />
+        </RelativeLayout>
+        
+        <include layout="@layout/include_settings_separator" />
+        <!-- ===================================================================== -->
+        <!-- INBOUND MODE -->
+        
+        <TextView
+            style="@style/CaptionCapitalPagerSettings"
+            android:layout_marginTop="@dimen/settings_caption_capital_margin_top"
+            android:text="@string/settings_inbound_call_mode" />
+        
+        <include layout="@layout/include_settings_separator" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp">
+
+            <TextView
+                style="@style/CaptionPagerSettings"
+                android:layout_marginRight="10dp"
+            android:text="@string/settings_inbound_mode" />
+
+            <com.rey.material.widget.Spinner
+                app:v_styleId="@array/spinner"
+                android:id="@+id/settings_inbound_mode_spinner"
+                style="@style/SpinnerRedSettings"
+                android:entries="@array/settings_inbound_modes" />
+
+        </LinearLayout>
+        
+        <include layout="@layout/include_settings_separator" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp">
+
+            <TextView
+                style="@style/CaptionPagerSettings"
+                android:layout_marginRight="10dp"
+                android:text="@string/settings_inbound_mode_failover_to_page" />
+
+            <com.rey.material.widget.Spinner
+                app:v_styleId="@array/spinner"
+                android:id="@+id/settings_failover_to_page_spinner"
+                style="@style/SpinnerRedSettings"
+                android:entries="@array/settings_failover_to_page" />
+
+        </LinearLayout>
+
+        <include layout="@layout/include_settings_separator" />
+
+        <!-- ===================================================================== -->
+        <!-- BLOCK MY NUMBER -->
+
+        <TextView
+            android:id="@+id/settings_block_my_number_label"
+            style="@style/CaptionCapitalPagerSettings"
+            android:layout_marginTop="@dimen/settings_caption_capital_margin_top"
+            android:text="@string/settings_block_my_number" />
+
+        <include layout="@layout/include_settings_separator_bold" />
+
+        <RadioGroup
+            android:id="@+id/settings_block_number_radiogroup"
+            style="@style/RadiogroupSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RadioButton
+                android:id="@+id/settings_block_number_on"
+                style="@style/RadiobuttonsSettings"
+                android:text="@string/settings_on" />
+
+            <RadioButton
+                android:id="@+id/settings_block_number_off"
+                style="@style/RadiobuttonsSettings"
+                android:text="@string/settings_off" />
+
+            <RadioButton
+                android:id="@+id/settings_block_number_ask"
+                style="@style/RadiobuttonsSettings"
+                android:checked="true"
+                android:text="@string/settings_ask" />
+        </RadioGroup>
+        
+        <include layout="@layout/include_settings_separator" />
+        
+        <!-- ===================================================================== -->
+        <!-- VOIP -->
+        <RelativeLayout style="@style/RelativeLayoutClickableSettings" >
+            <TextView
+                android:id="@+id/settings_voip_switch_label"
+                style="@style/CaptionPagerSettings"
+                android:text="@string/settings_voip" />
+            <Switch
+                android:id="@+id/settings_voip_switch"
+                android:switchTextAppearance="@style/SwitchTextAppearance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/settings_text_pager_margin"
+                android:checked="true"
+                android:thumb="@drawable/switch_inner_red"
+                android:track="@drawable/switch_track_red" 
+                />
+            <include layout="@layout/include_settings_separator" />
+            
+        </RelativeLayout>
+        
+        
+        <!-- HIDDEN LAYOUT -->
+         <RelativeLayout style="@style/RelativeLayoutClickableSettings" 
+             			android:minHeight="50dp"  
+             			android:visibility="gone"
+             			>
+
+            <TextView
+                android:id="@+id/settings_blocking_prefix_caption"
+                style="@style/CaptionPagerSettings"
+                android:text="@string/blocking_prefix" />
+
+            <EditText
+                android:id="@+id/settings_blocking_prefix_edittext"
+                style="@style/style_profile_edit_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/settings_blocking_prefix_caption"
+                android:gravity="center"
+                android:inputType="phone"
+                android:digits="*0123456789"
+                android:maxLength="4"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/settings_text_pager_margin"
+                android:layout_marginRight="@dimen/settings_text_pager_margin"
+                />
+        </RelativeLayout>
+        
+
+        <include layout="@layout/include_settings_separator" />
+        <!-- ===================================================================== -->
+
+        <LinearLayout
+            android:id="@+id/settings_calls_properties"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- LOG MY CALLS -->
+
+            <TextView
+                style="@style/CaptionCapitalPagerSettings"
+                android:layout_marginTop="@dimen/settings_caption_capital_margin_top"
+                android:text="@string/settings_log_my_calls" />
+
+            <include layout="@layout/include_settings_separator_bold" />
+
+            <RadioGroup
+                android:id="@+id/settings_log_calls_radiogroup"
+                style="@style/RadiogroupSettings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <RadioButton
+                    android:id="@+id/settings_log_calls_on"
+                    style="@style/RadiobuttonsSettings"
+                    android:text="@string/settings_on" />
+
+                <RadioButton
+                    android:id="@+id/settings_log_calls_off"
+                    style="@style/RadiobuttonsSettings"
+                    android:text="@string/settings_off" />
+
+                <RadioButton
+                    android:id="@+id/settings_log_calls_ask"
+                    style="@style/RadiobuttonsSettings"
+                    android:checked="true"
+                    android:text="@string/settings_ask" />
+            </RadioGroup>
+
+            <include layout="@layout/include_settings_separator" />
+            <!-- ===================================================================== -->
+            <!-- RECORD MY CALLS -->
+
+            <TextView
+                style="@style/CaptionCapitalPagerSettings"
+                android:layout_marginTop="@dimen/settings_caption_capital_margin_top"
+                android:text="@string/settings_record_my_calls" />
+
+            <include layout="@layout/include_settings_separator_bold" />
+
+            <RadioGroup
+                android:id="@+id/settings_record_calls_radiogroup"
+                style="@style/RadiogroupSettings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <RadioButton
+                    android:id="@+id/settings_record_calls_on"
+                    style="@style/RadiobuttonsSettings"
+                    android:text="@string/settings_on" />
+
+                <RadioButton
+                    android:id="@+id/settings_record_calls_off"
+                    style="@style/RadiobuttonsSettings"
+                    android:text="@string/settings_off" />
+
+                <RadioButton
+                    android:id="@+id/settings_record_calls_ask"
+                    style="@style/RadiobuttonsSettings"
+                    android:checked="true"
+                    android:text="@string/settings_ask" />
+            </RadioGroup>
+
+            <include layout="@layout/include_settings_separator" />
+        </LinearLayout>
+
+
+        <!-- ===================================================================== -->
+        <!-- Prefer Cellular Data -->
+
+        <include layout="@layout/include_settings_separator" />
+
+        <RelativeLayout style="@style/RelativeLayoutClickableSettings" >
+            <TextView
+                android:id="@+id/settings_prefer_cellular_switch_label"
+                style="@style/CaptionPagerSettings"
+                android:text="@string/settings_prefer_cellular" />
+
+            <Switch
+                android:id="@+id/settings_prefer_cellular_switch"
+                android:switchTextAppearance="@style/SwitchTextAppearance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/settings_text_pager_margin"
+                android:checked="true"
+                android:thumb="@drawable/switch_inner_red"
+                android:track="@drawable/switch_track_red"
+                />
+
+        </RelativeLayout>
+
+        <!-- ===================================================================== -->
+        <!-- AUTO TEXT RESPONSE -->
+
+        <include layout="@layout/include_settings_separator" />
+
+        <RelativeLayout
+            android:id="@+id/settings_auto_text_response_layout"
+            style="@style/RelativeLayoutClickableSettings" >
+
+            <ImageView
+                android:id="@+id/settings_auto_text_response_image"
+                style="@style/IconImageSettings"
+                android:src="@drawable/settings_ic_auto_text_response" />
+
+            <TextView
+                android:id="@+id/settings_auto_text_response_text"
+                style="@style/CaptionSettings"
+                android:layout_toRightOf="@id/settings_auto_text_response_image"
+                android:text="@string/settings_auto_text_response" />
+
+            <TextView
+                android:id="@+id/settings_auto_text_response_description"
+                style="@style/DescriptionSettings"
+                android:layout_toRightOf="@id/settings_auto_text_response_image"
+                android:layout_marginRight="@dimen/settings_horizontal_margin"
+                android:text="I get up at seven o&apos;clock......." />
+        </RelativeLayout>
+        
+        <!-- ===================================================================== -->
+        <!-- FORWARD PAGES -->
+
+        <include layout="@layout/include_settings_separator" />
+
+        <RelativeLayout
+            android:id="@+id/settings_forward_pages_layout"
+            style="@style/RelativeLayoutClickableSettings" >
+
+            <ImageView
+                android:id="@+id/settings_forward_pages_image"
+                style="@style/IconImageSettings"
+                android:src="@drawable/settings_ic_forward_pages" />
+
+            <TextView
+                android:id="@+id/settings_forward_pages_text"
+                style="@style/CaptionSettings"
+                android:layout_toRightOf="@id/settings_forward_pages_image"
+                android:text="@string/settings_forward_pages" />
+
+            <TextView
+                android:id="@+id/settings_forward_pages_description"
+                style="@style/DescriptionSettings"
+                android:layout_toRightOf="@id/settings_forward_pages_image"
+                android:layout_marginRight="@dimen/settings_horizontal_margin"
+                android:text="Forward to Ben Moore" />
+        </RelativeLayout>
+        
+        <!-- ===================================================================== -->
+        <!-- QUICK RESPONSE -->
+
+        <include layout="@layout/include_settings_separator" />
+
+        <RelativeLayout
+            android:id="@+id/settings_quick_responses_layout"
+            style="@style/RelativeLayoutClickableSettings" >
+
+            <ImageView
+                android:id="@+id/settings_quick_responses_image"
+                style="@style/IconImageSettings"
+                android:src="@drawable/settings_ic_quick_responses" />
+
+            <TextView
+                android:id="@+id/settings_quick_responses_text"
+                style="@style/SingleCaptionSettings"
+                android:layout_toRightOf="@id/settings_quick_responses_image"
+                android:text="@string/settings_quick_responses" />
+        </RelativeLayout>
+        
+        <!-- ===================================================================== -->
+        <!-- PIN SETTINGS -->
+
+        <include layout="@layout/include_settings_separator" />
+
+        <RelativeLayout
+            android:id="@+id/settings_pin_layout"
+            style="@style/RelativeLayoutClickableSettings" >
+
+            <ImageView
+                android:id="@+id/settings_pin_image"
+                style="@style/IconImageSettings"
+                android:src="@drawable/settings_ic_pin_settings" />
+
+            <TextView
+                android:id="@+id/settings_pin_text"
+                style="@style/SingleCaptionSettings"
+                android:layout_toRightOf="@id/settings_pin_image"
+                android:text="@string/settings_pin_settings" />
+        </RelativeLayout>
+        
+        <!-- ===================================================================== -->
+        <!-- ARCHIVE SETTINGS -->
+        <include layout="@layout/include_settings_separator" />
+
+
+        <RelativeLayout
+            android:id="@+id/settings_archive_layout"
+            style="@style/RelativeLayoutClickableSettings" >
+
+            <ImageView
+                android:id="@+id/settings_archive_image"
+                style="@style/IconImageSettings"
+                android:src="@drawable/settings_ic_archive" />
+
+            <TextView
+                android:id="@+id/settings_archive_text"
+                style="@style/SingleCaptionSettings"
+                android:layout_toRightOf="@id/settings_archive_image"
+                android:text="@string/settings_archive_settings" />
+        </RelativeLayout>
+        
+        <!-- ===================================================================== -->
+        <!-- MY PROFILE -->
+
+        <include layout="@layout/include_settings_separator" />
+
+        <RelativeLayout
+            android:id="@+id/settings_my_profile_layout"
+            style="@style/RelativeLayoutClickableSettings" >
+
+            <ImageView
+                android:id="@+id/settings_my_profile_image"
+                style="@style/IconImageSettings"
+                android:src="@drawable/settings_ic_my_profile" />
+
+            <TextView
+                android:id="@+id/settings_my_profile_text"
+                style="@style/SingleCaptionSettings"
+                android:layout_toRightOf="@id/settings_my_profile_image"
+                android:text="@string/settings_my_profile" />
+        </RelativeLayout>
+
+        <!-- ===================================================================== -->
+        <!-- PERSONAL VERIFICATION QUESTIONS SETTINGS -->
+
+        <include layout="@layout/include_settings_separator" />
+
+        <RelativeLayout
+            android:id="@+id/settings_personal_verification_questions"
+            style="@style/RelativeLayoutClickableSettings" >
+
+            <ImageView
+                android:id="@+id/settings_verification_question_image"
+                style="@style/IconImageSettings"
+                android:src="@drawable/new_message_popup_ic_urgent_static" />
+
+            <TextView
+                android:id="@+id/settings_verification_questions_text"
+                style="@style/SingleCaptionSettings"
+                android:layout_toRightOf="@id/settings_verification_question_image"
+                android:text="@string/title_activity_personal_verification_questions" />
+        </RelativeLayout>
+        <!-- ===================================================================== -->
+        <include layout="@layout/include_settings_separator" />
+
+        <!-- ===================================================================== -->
+        <!-- CONTACT RESYNCH -->
+        <TextView
+            style="@style/CaptionCapitalPagerSettings"
+            android:layout_marginTop="@dimen/settings_caption_capital_margin_top"
+            android:text="@string/settings_contact_resynch" />
+        <include layout="@layout/include_settings_separator_bold" />
+        <RelativeLayout
+            android:id="@+id/settings_contact_resynch_layout"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            style="@style/RelativeLayoutClickableSettings" >
+
+
+            <com.rey.material.widget.Button
+                app:v_styleId="@array/button_flat"
+                android:id="@+id/settings_bt_resynch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:text="@string/resynch"
+                android:textStyle="bold" />
+        </RelativeLayout>
+        <include layout="@layout/include_settings_separator" />
+
+    </LinearLayout>
+
+
+</ScrollView>

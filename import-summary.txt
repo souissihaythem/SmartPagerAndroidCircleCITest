@@ -1,0 +1,466 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Manifest Merging:
+-----------------
+Your project uses libraries that provide manifests, and your Eclipse
+project did not explicitly turn on manifest merging. In Android Gradle
+projects, manifests are always merged (meaning that contents from your
+libraries' manifests will be merged into the app manifest. If you had
+manually copied contents from library manifests into your app manifest
+you may need to remove these for the app to build correctly.
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+From SmartPagerAndroid:
+* .DS_Store
+* docs/
+* docs/BaseActivitySequenceUML.png
+* docs/BaseActivitySequenceUML.vsd
+* docs/SmartPager REST API desc.docx
+* docs/SmartPagerDatabaseSchema.dbd
+* docs/SmartPagerDatabaseSchema.gif
+* ic_launcher-web.png
+* lib_projects/
+* lib_projects/android-ffmpeg-library/
+* lib_projects/android-ffmpeg-library/.classpath
+* lib_projects/android-ffmpeg-library/.gitmodules
+* lib_projects/android-ffmpeg-library/.idea/
+* lib_projects/android-ffmpeg-library/.idea/.name
+* lib_projects/android-ffmpeg-library/.idea/compiler.xml
+* lib_projects/android-ffmpeg-library/.idea/copyright/
+* lib_projects/android-ffmpeg-library/.idea/copyright/profiles_settings.xml
+* lib_projects/android-ffmpeg-library/.idea/encodings.xml
+* lib_projects/android-ffmpeg-library/.idea/misc.xml
+* lib_projects/android-ffmpeg-library/.idea/modules.xml
+* lib_projects/android-ffmpeg-library/.idea/scopes/
+* lib_projects/android-ffmpeg-library/.idea/scopes/scope_settings.xml
+* lib_projects/android-ffmpeg-library/.idea/uiDesigner.xml
+* lib_projects/android-ffmpeg-library/.idea/vcs.xml
+* lib_projects/android-ffmpeg-library/.idea/workspace.xml
+* lib_projects/android-ffmpeg-library/.project
+* lib_projects/android-ffmpeg-library/.settings/
+* lib_projects/android-ffmpeg-library/.settings/org.eclipse.jdt.core.prefs
+* lib_projects/android-ffmpeg-library/AndroidManifest.xml
+* lib_projects/android-ffmpeg-library/README.md
+* lib_projects/android-ffmpeg-library/android-ffmpeg-library.iml
+* lib_projects/android-ffmpeg-library/bin/
+* lib_projects/android-ffmpeg-library/bin/AndroidManifest.xml
+* lib_projects/android-ffmpeg-library/bin/R.txt
+* lib_projects/android-ffmpeg-library/bin/android-ffmpeg-library.jar
+* lib_projects/android-ffmpeg-library/bin/classes/
+* lib_projects/android-ffmpeg-library/bin/classes/org/
+* lib_projects/android-ffmpeg-library/bin/classes/org/ffmpeg/
+* lib_projects/android-ffmpeg-library/bin/classes/org/ffmpeg/android/
+* lib_projects/android-ffmpeg-library/bin/classes/org/ffmpeg/android/BinaryInstaller.class
+* lib_projects/android-ffmpeg-library/bin/classes/org/ffmpeg/android/BuildConfig.class
+* lib_projects/android-ffmpeg-library/bin/classes/org/ffmpeg/android/FfmpegController$1.class
+* lib_projects/android-ffmpeg-library/bin/classes/org/ffmpeg/android/FfmpegController$FFMPEGArg.class
+* lib_projects/android-ffmpeg-library/bin/classes/org/ffmpeg/android/FfmpegController$FileMover.class
+* lib_projects/android-ffmpeg-library/bin/classes/org/ffmpeg/android/FfmpegController$StreamGobbler.class
+* lib_projects/android-ffmpeg-library/bin/classes/org/ffmpeg/android/FfmpegController.class
+* lib_projects/android-ffmpeg-library/bin/classes/org/ffmpeg/android/MediaDesc.class
+* lib_projects/android-ffmpeg-library/bin/classes/org/ffmpeg/android/MediaUtils.class
+* lib_projects/android-ffmpeg-library/bin/classes/org/ffmpeg/android/R$attr.class
+* lib_projects/android-ffmpeg-library/bin/classes/org/ffmpeg/android/R$drawable.class
+* lib_projects/android-ffmpeg-library/bin/classes/org/ffmpeg/android/R$raw.class
+* lib_projects/android-ffmpeg-library/bin/classes/org/ffmpeg/android/R$string.class
+* lib_projects/android-ffmpeg-library/bin/classes/org/ffmpeg/android/R$style.class
+* lib_projects/android-ffmpeg-library/bin/classes/org/ffmpeg/android/R.class
+* lib_projects/android-ffmpeg-library/bin/classes/org/ffmpeg/android/ShellUtils$1.class
+* lib_projects/android-ffmpeg-library/bin/classes/org/ffmpeg/android/ShellUtils$ShellCallback.class
+* lib_projects/android-ffmpeg-library/bin/classes/org/ffmpeg/android/ShellUtils.class
+* lib_projects/android-ffmpeg-library/bin/classes/org/ffmpeg/android/filters/
+* lib_projects/android-ffmpeg-library/bin/classes/org/ffmpeg/android/filters/DrawBoxVideoFilter.class
+* lib_projects/android-ffmpeg-library/bin/classes/org/ffmpeg/android/filters/DrawTextVideoFilter.class
+* lib_projects/android-ffmpeg-library/bin/classes/org/ffmpeg/android/filters/FadeVideoFilter.class
+* lib_projects/android-ffmpeg-library/bin/classes/org/ffmpeg/android/filters/OverlayVideoFilter.class
+* lib_projects/android-ffmpeg-library/bin/classes/org/ffmpeg/android/filters/RedactVideoFilter.class
+* lib_projects/android-ffmpeg-library/bin/classes/org/ffmpeg/android/filters/VideoFilter.class
+* lib_projects/android-ffmpeg-library/bin/classes/org/ffmpeg/android/test/
+* lib_projects/android-ffmpeg-library/bin/classes/org/ffmpeg/android/test/ConcatTest.class
+* lib_projects/android-ffmpeg-library/bin/classes/org/ffmpeg/android/test/ConvertTest.class
+* lib_projects/android-ffmpeg-library/bin/classes/org/ffmpeg/android/test/FilterTest.class
+* lib_projects/android-ffmpeg-library/bin/jarlist.cache
+* lib_projects/android-ffmpeg-library/bin/res/
+* lib_projects/android-ffmpeg-library/bin/res/crunch/
+* lib_projects/android-ffmpeg-library/bin/res/crunch/drawable-hdpi/
+* lib_projects/android-ffmpeg-library/bin/res/crunch/drawable-hdpi/ic_action_search.png
+* lib_projects/android-ffmpeg-library/bin/res/crunch/drawable-hdpi/ic_launcher.png
+* lib_projects/android-ffmpeg-library/bin/res/crunch/drawable-mdpi/
+* lib_projects/android-ffmpeg-library/bin/res/crunch/drawable-mdpi/ic_action_search.png
+* lib_projects/android-ffmpeg-library/bin/res/crunch/drawable-mdpi/ic_launcher.png
+* lib_projects/android-ffmpeg-library/bin/res/crunch/drawable-xhdpi/
+* lib_projects/android-ffmpeg-library/bin/res/crunch/drawable-xhdpi/ic_action_search.png
+* lib_projects/android-ffmpeg-library/bin/res/crunch/drawable-xhdpi/ic_launcher.png
+* lib_projects/android-ffmpeg-library/external/
+* lib_projects/android-ffmpeg-library/external/android-ffmpeg/
+* lib_projects/android-ffmpeg-library/external/android-ffmpeg/.gitignore
+* lib_projects/android-ffmpeg-library/external/android-ffmpeg/ARM_generate_position_independent_code_to_access_data_symbols.patch
+* lib_projects/android-ffmpeg-library/external/android-ffmpeg/ARM_intmath_use_native-size_return_types_for_clipping_functions.patch
+* lib_projects/android-ffmpeg-library/external/android-ffmpeg/README.txt
+* lib_projects/android-ffmpeg-library/external/android-ffmpeg/arm-asm-fix.patch
+* lib_projects/android-ffmpeg-library/external/android-ffmpeg/clean.sh
+* lib_projects/android-ffmpeg-library/external/android-ffmpeg/configure_ffmpeg.sh
+* lib_projects/android-ffmpeg-library/external/android-ffmpeg/configure_freetype2.sh
+* lib_projects/android-ffmpeg-library/external/android-ffmpeg/configure_make_everything.sh
+* lib_projects/android-ffmpeg-library/external/android-ffmpeg/configure_x264.sh
+* lib_projects/android-ffmpeg-library/external/android-ffmpeg/enable-fake-pkg-config.patch
+* lib_projects/android-ffmpeg-library/external/android-ffmpeg/fake-pkg-config
+* lib_projects/android-ffmpeg-library/external/android-ffmpeg/make_ffmpeg.sh
+* lib_projects/android-ffmpeg-library/external/android-ffmpeg/make_freetype2.sh
+* lib_projects/android-ffmpeg-library/external/android-ffmpeg/make_x264.sh
+* lib_projects/android-ffmpeg-library/external/android-ffmpeg/redact-plugins.patch
+* lib_projects/android-ffmpeg-library/external/android-ffmpeg/settings.sh
+* lib_projects/android-ffmpeg-library/external/android-ffmpeg/tests/
+* lib_projects/android-ffmpeg-library/external/android-ffmpeg/tests/aredact_unsort.txt
+* lib_projects/android-ffmpeg-library/external/android-ffmpeg/tests/redact_unsort.txt
+* lib_projects/android-ffmpeg-library/gen/
+* lib_projects/android-ffmpeg-library/gen/org/
+* lib_projects/android-ffmpeg-library/gen/org/ffmpeg/
+* lib_projects/android-ffmpeg-library/gen/org/ffmpeg/android/
+* lib_projects/android-ffmpeg-library/gen/org/ffmpeg/android/BuildConfig.java
+* lib_projects/android-ffmpeg-library/gen/org/ffmpeg/android/R.java
+* lib_projects/android-ffmpeg-library/proguard-project.txt
+* lib_projects/android-ffmpeg-library/project.properties
+* lib_projects/android-ffmpeg-library/res/
+* lib_projects/android-ffmpeg-library/res/drawable-hdpi/
+* lib_projects/android-ffmpeg-library/res/drawable-hdpi/ic_action_search.png
+* lib_projects/android-ffmpeg-library/res/drawable-hdpi/ic_launcher.png
+* lib_projects/android-ffmpeg-library/res/drawable-mdpi/
+* lib_projects/android-ffmpeg-library/res/drawable-mdpi/ic_action_search.png
+* lib_projects/android-ffmpeg-library/res/drawable-mdpi/ic_launcher.png
+* lib_projects/android-ffmpeg-library/res/drawable-xhdpi/
+* lib_projects/android-ffmpeg-library/res/drawable-xhdpi/ic_action_search.png
+* lib_projects/android-ffmpeg-library/res/drawable-xhdpi/ic_launcher.png
+* lib_projects/android-ffmpeg-library/res/raw/
+* lib_projects/android-ffmpeg-library/res/raw/ffmpeg.mp3
+* lib_projects/android-ffmpeg-library/res/values/
+* lib_projects/android-ffmpeg-library/res/values/strings.xml
+* lib_projects/android-ffmpeg-library/res/values/styles.xml
+* lib_projects/android-ffmpeg-library/src/
+* lib_projects/android-ffmpeg-library/src/org/
+* lib_projects/android-ffmpeg-library/src/org/ffmpeg/
+* lib_projects/android-ffmpeg-library/src/org/ffmpeg/android/
+* lib_projects/android-ffmpeg-library/src/org/ffmpeg/android/BinaryInstaller.java
+* lib_projects/android-ffmpeg-library/src/org/ffmpeg/android/FfmpegController.java
+* lib_projects/android-ffmpeg-library/src/org/ffmpeg/android/MediaDesc.java
+* lib_projects/android-ffmpeg-library/src/org/ffmpeg/android/MediaUtils.java
+* lib_projects/android-ffmpeg-library/src/org/ffmpeg/android/ShellUtils.java
+* lib_projects/android-ffmpeg-library/src/org/ffmpeg/android/filters/
+* lib_projects/android-ffmpeg-library/src/org/ffmpeg/android/filters/DrawBoxVideoFilter.java
+* lib_projects/android-ffmpeg-library/src/org/ffmpeg/android/filters/DrawTextVideoFilter.java
+* lib_projects/android-ffmpeg-library/src/org/ffmpeg/android/filters/FadeVideoFilter.java
+* lib_projects/android-ffmpeg-library/src/org/ffmpeg/android/filters/OverlayVideoFilter.java
+* lib_projects/android-ffmpeg-library/src/org/ffmpeg/android/filters/RedactVideoFilter.java
+* lib_projects/android-ffmpeg-library/src/org/ffmpeg/android/filters/VideoFilter.java
+* lib_projects/android-ffmpeg-library/src/org/ffmpeg/android/test/
+* lib_projects/android-ffmpeg-library/src/org/ffmpeg/android/test/ConcatTest.java
+* lib_projects/android-ffmpeg-library/src/org/ffmpeg/android/test/ConvertTest.java
+* lib_projects/android-ffmpeg-library/src/org/ffmpeg/android/test/FilterTest.java
+* lib_projects/framework/
+* lib_projects/framework/.classpath
+* lib_projects/framework/.project
+* lib_projects/framework/.settings/
+* lib_projects/framework/.settings/org.eclipse.jdt.core.prefs
+* lib_projects/framework/AndroidManifest.xml
+* lib_projects/framework/bin/
+* lib_projects/framework/bin/AndroidManifest.xml
+* lib_projects/framework/bin/R.txt
+* lib_projects/framework/bin/classes/
+* lib_projects/framework/bin/classes/biz/
+* lib_projects/framework/bin/classes/biz/mobidev/
+* lib_projects/framework/bin/classes/biz/mobidev/framework/
+* lib_projects/framework/bin/classes/biz/mobidev/framework/BuildConfig.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/R$attr.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/R$drawable.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/R$layout.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/R$string.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/R.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/adapters/
+* lib_projects/framework/bin/classes/biz/mobidev/framework/adapters/holderadapter/
+* lib_projects/framework/bin/classes/biz/mobidev/framework/adapters/holderadapter/BaseHolderAdapter.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/adapters/holderadapter/IHolder.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/adapters/holderadapter/IHolderCursor.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/adapters/holderadapter/IHolderSource.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/adapters/holderadapter/ReflectionHolder.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/adapters/holders/
+* lib_projects/framework/bin/classes/biz/mobidev/framework/adapters/holders/AbstractHolderCursor.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/injector/
+* lib_projects/framework/bin/classes/biz/mobidev/framework/injector/AbstractInjector.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/injector/Injector.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/injector/InjectorException.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/injector/InjectorRegister.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/injector/MethodInvocationHandler.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/injector/anatation/
+* lib_projects/framework/bin/classes/biz/mobidev/framework/injector/anatation/CheckedViewInjectAnatation.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/injector/anatation/CheckedViewValueInjectAnatation.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/injector/anatation/ClickListenerInjectAnatation.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/injector/anatation/ImageViewInjectAnatation.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/injector/anatation/LongClickListenerInjectAnatation.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/injector/anatation/OnItemClickListenerInjectAnatation.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/injector/anatation/OnItemSelectedListenerInjectAnatation.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/injector/anatation/ViewFontInjectAnatation.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/injector/anatation/ViewInjectAnatation.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/injector/anatation/ViewInjectBackgraundAnatation.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/injector/anatation/ViewValueInjectAnatation.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/injector/listeners/
+* lib_projects/framework/bin/classes/biz/mobidev/framework/injector/listeners/AbstractMethodInjector.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/injector/listeners/OnClickListenerInjector.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/injector/listeners/OnItemClickListenerInjector.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/injector/listeners/OnItemSelectedListenerInjector.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/injector/viewini/
+* lib_projects/framework/bin/classes/biz/mobidev/framework/injector/viewini/AbstractViewInjector.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/injector/viewini/CheckedViewInjector.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/injector/viewini/CheckedViewValueInjector.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/injector/viewini/ImageViewValueInjector.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/injector/viewini/ViewBackgraundValueInjector.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/injector/viewini/ViewFontInjector.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/injector/viewini/ViewInjector.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/injector/viewini/ViewValueInjector.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/utils/
+* lib_projects/framework/bin/classes/biz/mobidev/framework/utils/ContextView.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/utils/Dialogs.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/utils/ExString.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/utils/Log$LogType.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/utils/Log.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/utils/Telephone.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/utils/TimeChecker$TimeType.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/utils/TimeChecker.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/utils/ViewUtil.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/utils/providers/
+* lib_projects/framework/bin/classes/biz/mobidev/framework/utils/providers/ContactPoviderHelper.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/utils/providers/ContactProfile.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/utils/providers/IContactProfileContainer.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/validate/
+* lib_projects/framework/bin/classes/biz/mobidev/framework/validate/Validator.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/view/
+* lib_projects/framework/bin/classes/biz/mobidev/framework/view/ExpandableHeightGridView.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/view/ShoutGalleryView$1.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/view/ShoutGalleryView$2.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/view/ShoutGalleryView$3.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/view/ShoutGalleryView$4.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/view/ShoutGalleryView$5.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/view/ShoutGalleryView$6.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/view/ShoutGalleryView$7.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/view/ShoutGalleryView.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/viewdataprovider/
+* lib_projects/framework/bin/classes/biz/mobidev/framework/viewdataprovider/DataViewDependency.class
+* lib_projects/framework/bin/classes/biz/mobidev/framework/viewdataprovider/ViewDataProvider.class
+* lib_projects/framework/bin/framework.jar
+* lib_projects/framework/bin/jarlist.cache
+* lib_projects/framework/bin/res/
+* lib_projects/framework/bin/res/crunch/
+* lib_projects/framework/bin/res/crunch/drawable-hdpi/
+* lib_projects/framework/bin/res/crunch/drawable-hdpi/ic_launcher.png
+* lib_projects/framework/bin/res/crunch/drawable-ldpi/
+* lib_projects/framework/bin/res/crunch/drawable-ldpi/ic_launcher.png
+* lib_projects/framework/bin/res/crunch/drawable-mdpi/
+* lib_projects/framework/bin/res/crunch/drawable-mdpi/ic_launcher.png
+* lib_projects/framework/bin/res/crunch/drawable-xhdpi/
+* lib_projects/framework/bin/res/crunch/drawable-xhdpi/ic_launcher.png
+* lib_projects/framework/gen/
+* lib_projects/framework/gen/biz/
+* lib_projects/framework/gen/biz/mobidev/
+* lib_projects/framework/gen/biz/mobidev/framework/
+* lib_projects/framework/gen/biz/mobidev/framework/BuildConfig.java
+* lib_projects/framework/gen/biz/mobidev/framework/R.java
+* lib_projects/framework/libs/
+* lib_projects/framework/libs/android-support-v4.jar
+* lib_projects/framework/proguard-project.txt
+* lib_projects/framework/project.properties
+* lib_projects/framework/res/
+* lib_projects/framework/res/drawable-hdpi/
+* lib_projects/framework/res/drawable-hdpi/ic_launcher.png
+* lib_projects/framework/res/drawable-ldpi/
+* lib_projects/framework/res/drawable-ldpi/ic_launcher.png
+* lib_projects/framework/res/drawable-mdpi/
+* lib_projects/framework/res/drawable-mdpi/ic_launcher.png
+* lib_projects/framework/res/drawable-xhdpi/
+* lib_projects/framework/res/drawable-xhdpi/ic_launcher.png
+* lib_projects/framework/res/layout/
+* lib_projects/framework/res/layout/main.xml
+* lib_projects/framework/res/values/
+* lib_projects/framework/res/values/strings.xml
+* lib_projects/framework/src/
+* lib_projects/framework/src/biz/
+* lib_projects/framework/src/biz/mobidev/
+* lib_projects/framework/src/biz/mobidev/framework/
+* lib_projects/framework/src/biz/mobidev/framework/adapters/
+* lib_projects/framework/src/biz/mobidev/framework/adapters/holderadapter/
+* lib_projects/framework/src/biz/mobidev/framework/adapters/holderadapter/BaseHolderAdapter.java
+* lib_projects/framework/src/biz/mobidev/framework/adapters/holderadapter/IHolder.java
+* lib_projects/framework/src/biz/mobidev/framework/adapters/holderadapter/IHolderCursor.java
+* lib_projects/framework/src/biz/mobidev/framework/adapters/holderadapter/IHolderSource.java
+* lib_projects/framework/src/biz/mobidev/framework/adapters/holderadapter/ReflectionHolder.java
+* lib_projects/framework/src/biz/mobidev/framework/adapters/holders/
+* lib_projects/framework/src/biz/mobidev/framework/adapters/holders/AbstractHolderCursor.java
+* lib_projects/framework/src/biz/mobidev/framework/injector/
+* lib_projects/framework/src/biz/mobidev/framework/injector/AbstractInjector.java
+* lib_projects/framework/src/biz/mobidev/framework/injector/Injector.java
+* lib_projects/framework/src/biz/mobidev/framework/injector/InjectorException.java
+* lib_projects/framework/src/biz/mobidev/framework/injector/InjectorRegister.java
+* lib_projects/framework/src/biz/mobidev/framework/injector/MethodInvocationHandler.java
+* lib_projects/framework/src/biz/mobidev/framework/injector/anatation/
+* lib_projects/framework/src/biz/mobidev/framework/injector/anatation/CheckedViewInjectAnatation.java
+* lib_projects/framework/src/biz/mobidev/framework/injector/anatation/CheckedViewValueInjectAnatation.java
+* lib_projects/framework/src/biz/mobidev/framework/injector/anatation/ClickListenerInjectAnatation.java
+* lib_projects/framework/src/biz/mobidev/framework/injector/anatation/ImageViewInjectAnatation.java
+* lib_projects/framework/src/biz/mobidev/framework/injector/anatation/LongClickListenerInjectAnatation.java
+* lib_projects/framework/src/biz/mobidev/framework/injector/anatation/OnItemClickListenerInjectAnatation.java
+* lib_projects/framework/src/biz/mobidev/framework/injector/anatation/OnItemSelectedListenerInjectAnatation.java
+* lib_projects/framework/src/biz/mobidev/framework/injector/anatation/ViewFontInjectAnatation.java
+* lib_projects/framework/src/biz/mobidev/framework/injector/anatation/ViewInjectAnatation.java
+* lib_projects/framework/src/biz/mobidev/framework/injector/anatation/ViewInjectBackgraundAnatation.java
+* lib_projects/framework/src/biz/mobidev/framework/injector/anatation/ViewValueInjectAnatation.java
+* lib_projects/framework/src/biz/mobidev/framework/injector/listeners/
+* lib_projects/framework/src/biz/mobidev/framework/injector/listeners/AbstractMethodInjector.java
+* lib_projects/framework/src/biz/mobidev/framework/injector/listeners/OnClickListenerInjector.java
+* lib_projects/framework/src/biz/mobidev/framework/injector/listeners/OnItemClickListenerInjector.java
+* lib_projects/framework/src/biz/mobidev/framework/injector/listeners/OnItemSelectedListenerInjector.java
+* lib_projects/framework/src/biz/mobidev/framework/injector/viewini/
+* lib_projects/framework/src/biz/mobidev/framework/injector/viewini/AbstractViewInjector.java
+* lib_projects/framework/src/biz/mobidev/framework/injector/viewini/CheckedViewInjector.java
+* lib_projects/framework/src/biz/mobidev/framework/injector/viewini/CheckedViewValueInjector.java
+* lib_projects/framework/src/biz/mobidev/framework/injector/viewini/ImageViewValueInjector.java
+* lib_projects/framework/src/biz/mobidev/framework/injector/viewini/ViewBackgraundValueInjector.java
+* lib_projects/framework/src/biz/mobidev/framework/injector/viewini/ViewFontInjector.java
+* lib_projects/framework/src/biz/mobidev/framework/injector/viewini/ViewInjector.java
+* lib_projects/framework/src/biz/mobidev/framework/injector/viewini/ViewValueInjector.java
+* lib_projects/framework/src/biz/mobidev/framework/utils/
+* lib_projects/framework/src/biz/mobidev/framework/utils/ContextView.java
+* lib_projects/framework/src/biz/mobidev/framework/utils/Dialogs.java
+* lib_projects/framework/src/biz/mobidev/framework/utils/ExString.java
+* lib_projects/framework/src/biz/mobidev/framework/utils/Log.java
+* lib_projects/framework/src/biz/mobidev/framework/utils/Telephone.java
+* lib_projects/framework/src/biz/mobidev/framework/utils/TimeChecker.java
+* lib_projects/framework/src/biz/mobidev/framework/utils/ViewUtil.java
+* lib_projects/framework/src/biz/mobidev/framework/utils/providers/
+* lib_projects/framework/src/biz/mobidev/framework/utils/providers/ContactPoviderHelper.java
+* lib_projects/framework/src/biz/mobidev/framework/utils/providers/ContactProfile.java
+* lib_projects/framework/src/biz/mobidev/framework/utils/providers/IContactProfileContainer.java
+* lib_projects/framework/src/biz/mobidev/framework/validate/
+* lib_projects/framework/src/biz/mobidev/framework/validate/Validator.java
+* lib_projects/framework/src/biz/mobidev/framework/view/
+* lib_projects/framework/src/biz/mobidev/framework/view/ExpandableHeightGridView.java
+* lib_projects/framework/src/biz/mobidev/framework/view/ShoutGalleryView.java
+* lib_projects/framework/src/biz/mobidev/framework/viewdataprovider/
+* lib_projects/framework/src/biz/mobidev/framework/viewdataprovider/DataViewDependency.java
+* lib_projects/framework/src/biz/mobidev/framework/viewdataprovider/ViewDataProvider.java
+* make_build.sh
+* newrelic.properties
+* proguard-project.txt
+* uml/
+* uml/start.ucls
+From android-ffmpeg-library:
+* .gitmodules
+* .idea/
+* .idea/.name
+* .idea/compiler.xml
+* .idea/copyright/
+* .idea/copyright/profiles_settings.xml
+* .idea/encodings.xml
+* .idea/misc.xml
+* .idea/modules.xml
+* .idea/scopes/
+* .idea/scopes/scope_settings.xml
+* .idea/uiDesigner.xml
+* .idea/vcs.xml
+* .idea/workspace.xml
+* README.md
+* android-ffmpeg-library.iml
+* external/
+* external/android-ffmpeg/
+* external/android-ffmpeg/.gitignore
+* external/android-ffmpeg/ARM_generate_position_independent_code_to_access_data_symbols.patch
+* external/android-ffmpeg/ARM_intmath_use_native-size_return_types_for_clipping_functions.patch
+* external/android-ffmpeg/README.txt
+* external/android-ffmpeg/arm-asm-fix.patch
+* external/android-ffmpeg/clean.sh
+* external/android-ffmpeg/configure_ffmpeg.sh
+* external/android-ffmpeg/configure_freetype2.sh
+* external/android-ffmpeg/configure_make_everything.sh
+* external/android-ffmpeg/configure_x264.sh
+* external/android-ffmpeg/enable-fake-pkg-config.patch
+* external/android-ffmpeg/fake-pkg-config
+* external/android-ffmpeg/make_ffmpeg.sh
+* external/android-ffmpeg/make_freetype2.sh
+* external/android-ffmpeg/make_x264.sh
+* external/android-ffmpeg/redact-plugins.patch
+* external/android-ffmpeg/settings.sh
+* external/android-ffmpeg/tests/
+* external/android-ffmpeg/tests/aredact_unsort.txt
+* external/android-ffmpeg/tests/redact_unsort.txt
+* proguard-project.txt
+From framework:
+* proguard-project.txt
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+android-support-v4.jar => com.android.support:support-v4:19.1.0
+gcm.jar => com.google.android.gms:play-services:+
+gson-2.3.1.jar => com.google.code.gson:gson:2.3.1
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+In android-ffmpeg-library:
+* AndroidManifest.xml => androidffmpeglibrary/src/main/AndroidManifest.xml
+* assets/ => androidffmpeglibrary/src/main/assets
+* res/ => androidffmpeglibrary/src/main/res/
+* src/ => androidffmpeglibrary/src/main/java/
+In framework:
+* AndroidManifest.xml => framework/src/main/AndroidManifest.xml
+* assets/ => framework/src/main/assets
+* res/ => framework/src/main/res/
+* src/ => framework/src/main/java/
+In SmartPagerAndroid:
+* AndroidManifest.xml => smartPagerAndroid/src/main/AndroidManifest.xml
+* assets/ => smartPagerAndroid/src/main/assets/
+* libs/android-async-http-1.4.6.jar => smartPagerAndroid/libs/android-async-http-1.4.6.jar
+* libs/android-smart-image-view-1.0.0.jar => smartPagerAndroid/libs/android-smart-image-view-1.0.0.jar
+* libs/armeabi-v7a/libtwilio-native.so => smartPagerAndroid/src/main/jniLibs/armeabi-v7a/libtwilio-native.so
+* libs/armeabi/libtwilio-native.so => smartPagerAndroid/src/main/jniLibs/armeabi/libtwilio-native.so
+* libs/commons-io-2.4.jar => smartPagerAndroid/libs/commons-io-2.4.jar
+* libs/crittercism_v4_4_0_sdkonly.jar => smartPagerAndroid/libs/crittercism_v4_4_0_sdkonly.jar
+* libs/google-play-services.jar => smartPagerAndroid/libs/google-play-services.jar
+* libs/httpmime-4.1.1.jar => smartPagerAndroid/libs/httpmime-4.1.1.jar
+* libs/libphonenumber-7.0.6.jar => smartPagerAndroid/libs/libphonenumber-7.0.6.jar
+* libs/mips/libtwilio-native.so => smartPagerAndroid/src/main/jniLibs/mips/libtwilio-native.so
+* libs/newrelic.android.jar => smartPagerAndroid/libs/newrelic.android.jar
+* libs/otto-1.3.8.jar => smartPagerAndroid/libs/otto-1.3.8.jar
+* libs/twilio-java-sdk-4.5.0.jar => smartPagerAndroid/libs/twilio-java-sdk-4.5.0.jar
+* libs/twilioclient-android.jar => smartPagerAndroid/libs/twilioclient-android.jar
+* libs/x86/libtwilio-native.so => smartPagerAndroid/src/main/jniLibs/x86/libtwilio-native.so
+* lint.xml => smartPagerAndroid/lint.xml
+* res/ => smartPagerAndroid/src/main/res/
+* src/ => smartPagerAndroid/src/main/java/
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)
